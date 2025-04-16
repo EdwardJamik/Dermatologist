@@ -1,0 +1,1394 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  color: #1c1c1c;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  color: #1c1c1c;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  color: #1c1c1c;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("../images/mainBg2.png");
+  background-position: top;
+  background-size: cover;
+  background-color: #ece6e0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.top_content {
+  padding: 44px 0 0;
+}
+.top_content .container {
+  position: relative;
+}
+.top_content .container h1 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+.top_content .container h2 {
+  max-width: 250px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #c52226;
+  margin: 0 auto 46px;
+}
+.top_content .container h2 span {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+.top_content .container .list_container {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+.top_content .container .list_container .bg_word {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: Cormorant Garamond;
+  font-weight: 500;
+  font-size: 78.74px;
+  line-height: 100%;
+  letter-spacing: 12%;
+  vertical-align: middle;
+  color: #1c1c1c;
+  opacity: 0.05;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: -40px;
+}
+.top_content .container .list_container .bg_word > span {
+  display: block;
+  font-family: Cormorant Garamond;
+  font-weight: 300;
+  font-size: 78.74px;
+  line-height: 100%;
+  letter-spacing: 12%;
+  vertical-align: middle;
+}
+.top_content .container .list_container img {
+  z-index: 2;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+.top_content .container .list_container ul {
+  position: absolute;
+  top: 44%;
+  z-index: 3;
+}
+.top_content .container .list_container ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 100px;
+  padding: 14px 13px 14px 30px;
+  max-height: 32px;
+  margin-bottom: 5px;
+}
+.top_content .container .list_container ul li::after {
+  content: " ";
+  position: absolute;
+  left: 18px;
+  height: 5.4px;
+  width: 5.4px;
+  background-image: url("../images/plusIcon.svg");
+  background-position: center;
+  background-size: cover;
+}
+.top_content .container .list_container ul li p {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.top_content .container .button_container {
+  position: relative;
+  top: -70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top_content .container .button_container .other_button {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 8%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 25%;
+  text-decoration-thickness: 5%;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: #c52226;
+  margin-top: 28px;
+}
+
+.about_me {
+  padding: 0 0 0;
+}
+.about_me .container > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.about_me .container > img {
+  z-index: 2;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+.about_me .container .about_list {
+  margin-top: 10px;
+}
+.about_me .container .about_list > div {
+  position: relative;
+  background: #ece6e0;
+  border-radius: 34px;
+  box-sizing: border-box;
+  padding: 32px;
+  margin-bottom: 6px;
+}
+.about_me .container .about_list .first {
+  background-image: url("../images/first_block_bg.svg");
+  background-position: left;
+  background-size: cover;
+  height: 342px;
+}
+.about_me .container .about_list .first ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.about_me .container .about_list .first ul li {
+  display: flex;
+  flex-direction: column;
+}
+.about_me .container .about_list .first ul li span {
+  color: #c52226;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  background: linear-gradient(326.78deg, #c52226 -11.54%, #fb6262 97.01%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.about_me .container .about_list .first ul li p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  background: linear-gradient(0deg, #1c1c1c, #1c1c1c), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.about_me .container .about_list .second {
+  background-image: url("../images/second_block_bg.svg");
+  background-position: left;
+  background-size: cover;
+}
+.about_me .container .about_list .second .icon {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-image: url("../images/fileIcon.svg");
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: center;
+  margin: 0 auto 20px;
+}
+.about_me .container .about_list .second h4 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about_me .container .about_list .second p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.about_me .container .about_list .second p b {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.about_me .container .about_list .third {
+  background-image: url("../images/third_block_bg.svg");
+  background-position: left;
+  background-size: cover;
+}
+.about_me .container .about_list .third .icon {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-image: url("../images/complexIcon.svg");
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: center;
+  margin: 0 auto 20px;
+}
+.about_me .container .about_list .third h4 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about_me .container .about_list .third p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.about_me .container .about_list .third p b {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.history {
+  margin-top: 64px;
+  max-height: 806px;
+}
+.history .container h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.history .container img {
+  position: relative;
+  max-height: 400px;
+  z-index: 2;
+}
+.history .container .text {
+  position: relative;
+  top: -88px;
+  padding: 125px 32px 32px;
+  background-color: #fff;
+  background-image: url("../images/historyIconBg.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 30%;
+  border-radius: 20px 20px 34px 34px;
+}
+.history .container .text p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  margin-bottom: 12px;
+}
+.history .container .text button {
+  background: transparent;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-decoration-style: solid;
+  text-decoration-offset: 25%;
+  text-decoration-thickness: 0%;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  border-bottom: 1px solid #1c1c1c;
+}
+
+.tarifs {
+  margin-top: 16px;
+}
+.tarifs .container .content {
+  border-radius: 34px;
+  background: #0e0e0e;
+  padding: 48px 10px 10px;
+}
+.tarifs .container .content > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.tarifs .container .content .sections h5 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #84817e;
+  margin-bottom: 12px;
+}
+.tarifs .container .content .sections .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 32px;
+}
+.tarifs .container .content .sections .buttons button {
+  background-color: transparent;
+  padding: 8px 12px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
+.tarifs .container .content .sections .buttons button.active {
+  background-color: #c52226;
+  border: none;
+}
+.tarifs .container .content .tarifsContent .number {
+  width: 40px;
+  height: 40px;
+  border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 32px auto 12px;
+}
+.tarifs .container .content .tarifsContent .first, .tarifs .container .content .tarifsContent .second, .tarifs .container .content .tarifsContent .third {
+  display: none;
+  padding: 32px 0 32px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+.tarifs .container .content .tarifsContent .first.active, .tarifs .container .content .tarifsContent .second.active, .tarifs .container .content .tarifsContent .third.active {
+  display: block;
+}
+.tarifs .container .content .tarifsContent .first > h4, .tarifs .container .content .tarifsContent .second > h4, .tarifs .container .content .tarifsContent .third > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tarifs .container .content .tarifsContent .first p, .tarifs .container .content .tarifsContent .second p, .tarifs .container .content .tarifsContent .third p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+}
+.tarifs .container .content .tarifsContent .first p b, .tarifs .container .content .tarifsContent .second p b, .tarifs .container .content .tarifsContent .third p b {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+}
+.tarifs .container .content .tarifsContent .first hr, .tarifs .container .content .tarifsContent .second hr, .tarifs .container .content .tarifsContent .third hr {
+  height: 0.5px;
+  border-bottom: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  margin: 24px 10px;
+}
+.tarifs .container .content .tarifsContent .first .price h4, .tarifs .container .content .tarifsContent .second .price h4, .tarifs .container .content .tarifsContent .third .price h4 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+.tarifs .container .content .tarifsContent .first .price ul, .tarifs .container .content .tarifsContent .second .price ul, .tarifs .container .content .tarifsContent .third .price ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 192px;
+  padding: 0 10px;
+}
+.tarifs .container .content .tarifsContent .first .price ul li, .tarifs .container .content .tarifsContent .second .price ul li, .tarifs .container .content .tarifsContent .third .price ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: 0.5px dashed #c52226;
+  height: 96px;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.ua .title, .tarifs .container .content .tarifsContent .second .price ul li.ua .title, .tarifs .container .content .tarifsContent .third .price ul li.ua .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.ua .title .icon, .tarifs .container .content .tarifsContent .second .price ul li.ua .title .icon, .tarifs .container .content .tarifsContent .third .price ul li.ua .title .icon {
+  background-image: url("../images/uaFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other, .tarifs .container .content .tarifsContent .second .price ul li.other, .tarifs .container .content .tarifsContent .third .price ul li.other {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 0;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other::before, .tarifs .container .content .tarifsContent .second .price ul li.other::before, .tarifs .container .content .tarifsContent .third .price ul li.other::before {
+  content: " ";
+  position: absolute;
+  height: 32px;
+  width: 0.5px;
+  border-left: 0.5px dashed #c52226;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .us, .tarifs .container .content .tarifsContent .second .price ul li.other .us, .tarifs .container .content .tarifsContent .third .price ul li.other .us {
+  margin: 0 auto;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .us .title, .tarifs .container .content .tarifsContent .second .price ul li.other .us .title, .tarifs .container .content .tarifsContent .third .price ul li.other .us .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .us .title .icon, .tarifs .container .content .tarifsContent .second .price ul li.other .us .title .icon, .tarifs .container .content .tarifsContent .third .price ul li.other .us .title .icon {
+  background-image: url("../images/usFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .eu, .tarifs .container .content .tarifsContent .second .price ul li.other .eu, .tarifs .container .content .tarifsContent .third .price ul li.other .eu {
+  margin: 0 auto;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .eu .title, .tarifs .container .content .tarifsContent .second .price ul li.other .eu .title, .tarifs .container .content .tarifsContent .third .price ul li.other .eu .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .price ul li.other .eu .title .icon, .tarifs .container .content .tarifsContent .second .price ul li.other .eu .title .icon, .tarifs .container .content .tarifsContent .third .price ul li.other .eu .title .icon {
+  background-image: url("../images/euFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .price ul li .title, .tarifs .container .content .tarifsContent .second .price ul li .title, .tarifs .container .content .tarifsContent .third .price ul li .title {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.tarifs .container .content .tarifsContent .first .price ul li .price, .tarifs .container .content .tarifsContent .second .price ul li .price, .tarifs .container .content .tarifsContent .third .price ul li .price {
+  font-family: Cormorant Garamond;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+}
+.tarifs .container .content .tarifsContent .first .price ul li .price > span, .tarifs .container .content .tarifsContent .second .price ul li .price > span, .tarifs .container .content .tarifsContent .third .price ul li .price > span {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+}
+.tarifs .container .content .tarifsContent .first .services, .tarifs .container .content .tarifsContent .second .services, .tarifs .container .content .tarifsContent .third .services {
+  margin: 0 20px;
+}
+.tarifs .container .content .tarifsContent .first .services ul li, .tarifs .container .content .tarifsContent .second .services ul li, .tarifs .container .content .tarifsContent .third .services ul li {
+  position: relative;
+  padding-left: 24px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+.tarifs .container .content .tarifsContent .first .services ul li b, .tarifs .container .content .tarifsContent .second .services ul li b, .tarifs .container .content .tarifsContent .third .services ul li b {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+.tarifs .container .content .tarifsContent .first .services ul li:not(:last-child), .tarifs .container .content .tarifsContent .second .services ul li:not(:last-child), .tarifs .container .content .tarifsContent .third .services ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.tarifs .container .content .tarifsContent .first .services ul li::before, .tarifs .container .content .tarifsContent .second .services ul li::before, .tarifs .container .content .tarifsContent .third .services ul li::before {
+  content: " ";
+  position: absolute;
+  background-image: url("../images/listIconsvg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+}
+.tarifs .container .content .tarifsContent .first .consultation, .tarifs .container .content .tarifsContent .second .consultation, .tarifs .container .content .tarifsContent .third .consultation {
+  margin: 0 20px;
+}
+.tarifs .container .content .tarifsContent .first .consultation > h4, .tarifs .container .content .tarifsContent .second .consultation > h4, .tarifs .container .content .tarifsContent .third .consultation > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.tarifs .container .content .tarifsContent .first .consultation p, .tarifs .container .content .tarifsContent .second .consultation p, .tarifs .container .content .tarifsContent .third .consultation p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice h4, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice h4, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice h4 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 192px;
+  padding: 0 10px;
+  margin-bottom: 32px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: 0.5px dashed #c52226;
+  height: 96px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.ua .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.ua .title .icon, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.ua .title .icon, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.ua .title .icon {
+  background-image: url("../images/uaFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 0;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other::before, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other::before, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other::before {
+  content: " ";
+  position: absolute;
+  height: 32px;
+  width: 0.5px;
+  border-left: 0.5px dashed #c52226;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us {
+  margin: 0 auto;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us .title .icon, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us .title .icon, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us .title .icon {
+  background-image: url("../images/usFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .eu, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .eu, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .eu {
+  margin: 0 auto;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .eu .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .eu .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .eu .title {
+  display: flex;
+  align-items: center;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .eu .title .icon, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .eu .title .icon, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .eu .title .icon {
+  background-image: url("../images/euFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li .title {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li .price, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li .price, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li .price {
+  font-family: Cormorant Garamond;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li .price > span, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li .price > span, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li .price > span {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+}
+.tarifs .container .content .tarifsContent .first .red_button, .tarifs .container .content .tarifsContent .second .red_button, .tarifs .container .content .tarifsContent .third .red_button {
+  margin: 0 auto;
+  width: auto;
+}
+.tarifs .container .content .tarifsContent .second > p {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.tarifs .container .content .tarifsContent .second .services ul {
+  margin-top: 24px;
+}
+.tarifs .container .content .tarifsContent .second .services ul li {
+  margin-bottom: 24px;
+}
+.tarifs .container .content .tarifsContent .second .services ul li > ul {
+  margin-top: 12px;
+}
+.tarifs .container .content .tarifsContent .second .services ul li > ul li {
+  padding: 0;
+  list-style: outside;
+}
+.tarifs .container .content .tarifsContent .second .services ul li > ul li::before {
+  display: none;
+}
+
+.reviews {
+  margin-top: 64px;
+}
+.reviews .number {
+  width: 40px;
+  height: 40px;
+  border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 32px auto 12px;
+}
+.reviews > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  padding: 0 15px;
+}
+.reviews ul li {
+  position: relative;
+}
+.reviews ul li:not(:last-child)::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  max-width: 295px;
+  width: 100%;
+  height: 0.5px;
+  border-bottom: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.reviews ul li > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding: 0 15px;
+}
+.reviews ul li > p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 15px;
+}
+.reviews ul li .sliders {
+  padding-bottom: 32px;
+}
+.reviews ul li .sliders .messageSlider {
+  padding-left: 15px;
+  margin-bottom: 24px;
+}
+.reviews ul li .sliders .messageSlider img {
+  margin-right: 8px;
+}
+.reviews ul li .sliders .photoSlider {
+  padding-left: 15px;
+}
+.reviews ul li .sliders .photoSlider img {
+  margin-right: 8px;
+}
+
+.education .container .number {
+  width: 40px;
+  height: 40px;
+  border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 32px auto 12px;
+}
+.education .container h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.education .container ul li {
+  position: relative;
+  padding-bottom: 32px;
+}
+.education .container ul li:not(:last-child)::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  max-width: 295px;
+  width: 100%;
+  height: 0.5px;
+  border-bottom: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.education .container ul li > p {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.education .container ul li > span {
+  display: block;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #84817e;
+}
+.education .container ul li > span b {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1c1c1c;
+}
+.education .container .about_button {
+  background: transparent;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-decoration-style: solid;
+  text-decoration-offset: 25%;
+  text-decoration-thickness: 0%;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  border-bottom: 1px solid #1c1c1c;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+  max-width: 110px;
+}
+.education .container .slider_certificate {
+  margin-top: 64px;
+}
+.education .container .slider_certificate .content img {
+  margin-right: 8px;
+}
+
+.asked {
+  margin-top: 64px;
+}
+.asked .container > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.asked .container > ul > li {
+  padding: 20px;
+  border: 0.5px solid rgba(28, 28, 28, 0.1490196078);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.asked .container > ul > li .title {
+  display: flex;
+  align-items: self-start;
+}
+.asked .container > ul > li .title > span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.asked .container > ul > li .title > h4 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  max-width: 264px;
+}
+.asked .container > ul > li .title button {
+  width: 16px;
+  height: 24px;
+  background: transparent;
+  background-image: url("../images/arrowIconsvg.svg");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+.asked .container > ul > li .content {
+  padding: 16px 0 0;
+  margin: 16px 0 0;
+  border-top: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+}
+.asked .container > ul > li .content > p {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  margin-bottom: 16px;
+}
+.asked .container > ul > li .content > p.five {
+  font-weight: 400;
+}
+.asked .container > ul > li .content > p b {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+}
+.asked .container > ul > li .content > p.last {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  color: #84817e;
+}
+.asked .container > ul > li .content ul.dotted {
+  padding: 0 24px;
+}
+.asked .container > ul > li .content ul.dotted > li {
+  padding: 0;
+  list-style: outside;
+}
+.asked .container > ul > li .content ul.last {
+  margin-top: 12px;
+}
+.asked .container > ul > li .content ul > li {
+  position: relative;
+  padding-left: 16px;
+}
+.asked .container > ul > li .content ul > li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.asked .container > ul > li .content ul > li p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+}
+.asked .container > ul > li .content ul > li p b {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+}
+.asked .container > ul > li .content ul > li span {
+  display: block;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  color: #84817e;
+}
+.asked .container > ul > li .content ul > li span.number {
+  position: absolute;
+  left: 0;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  color: #1c1c1c;
+}
+
+.questions {
+  position: relative;
+  padding-bottom: 60px;
+  max-height: 550px;
+}
+.questions h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.questions img {
+  max-width: 375px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 490px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.questions a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 72px;
+  margin: 0 auto;
+}
+
+.red_button {
+  background-image: url(../images/buttonBg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 72px;
+  height: 100%;
+  max-width: 310px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 9.62px 34.44px 0px rgba(197, 34, 38, 0.2509803922);
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 8%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.red_button.big {
+  background-image: url("../images/buttonBgbig.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.stagger-children > *.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-appear li {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.list-appear li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}/*# sourceMappingURL=style.css.map */
