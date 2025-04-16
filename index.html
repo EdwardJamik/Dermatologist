@@ -58,15 +58,15 @@
             <div class="first">
               <ul class="list-appear">
                 <li>
-                  <span>4+</span>
+                  <span><b>4</b>+</span>
                   <p>років досвід роботи</p>
                 </li>
                 <li>
-                  <span>2500+</span>
+                  <span><b>2500</b>+</span>
                   <p>пацієнтів онлайн та офлайн</p>
                 </li>
                 <li>
-                  <span>100+</span>
+                  <span><b>100</b>+</span>
                   <p>навчань в Україні та закордоном</p>
                 </li>
               </ul>
@@ -825,7 +825,7 @@
 
     <section>
       <div class="questions">
-        <h4>Залишились <br />питання?</h4>
+        <h4>Залишились <br />питання<span class="blinking-question">?</span></h4>
         <img src="./assets/images/question_img.png" alt="Question" />
         <a href="#" class="red_button">Написати мені</a>
       </div>
@@ -938,6 +938,81 @@
 
     })
 
+
+    $(document).ready(function () {
+      // Функція для плавної анімації збільшення чисел
+      function animateNumbers() {
+        $('.about_list .first li span b').each(function () {
+          const $this = $(this)
+
+          // Перевіряємо, чи був елемент вже анімований
+          if (!$this.hasClass('animated')) {
+
+            // Отримуємо кінцеве значення
+            let endValue = parseInt($this.text())
+
+            // Видаляємо знак "+" з тексту, якщо він є
+            if ($this.text().indexOf('+') !== -1) {
+              endValue = parseInt($this.text())
+              const hasPlus = true
+            }
+
+            // Установлюємо початкове значення на 0
+            $this.text('0')
+            $this.addClass('animated')
+
+            // Вираховуємо крок для анімації в залежності від кінцевого значення
+            const duration = 2000 // Тривалість анімації в мілісекундах
+            let step = 1
+
+            // Для більших чисел збільшуємо крок
+            if (endValue > 100) {
+              step = Math.ceil(endValue / 100)
+            }
+
+            // Лічильник та інтервал для анімації числа
+            let current = 0
+            const interval = setInterval(function () {
+              current += step
+
+              // Якщо досягли або перевищили кінцеве значення, встановлюємо кінцеве значення і очищаємо інтервал
+              if (current >= endValue) {
+                clearInterval(interval)
+                $this.text(endValue + ($this.text().indexOf('+') !== -1 ? '+' : ''))
+              } else {
+                $this.text(current)
+              }
+            }, Math.floor(duration / (endValue / step)))
+          }
+        })
+      }
+
+      // Функція перевірки, чи елемент в зоні видимості
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect()
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+          rect.bottom >= 0
+        )
+      }
+
+      // Перевірка чи блок з числами потрапив у видиму зону при прокрутці
+      function checkIfNumbersVisible() {
+        const numbersBlock = $('.about_list .first')
+        if (isElementInViewport(numbersBlock[0]) && !numbersBlock.hasClass('numbers-animated')) {
+          numbersBlock.addClass('numbers-animated')
+          animateNumbers()
+        }
+      }
+
+      // Перевіряємо при завантаженні сторінки
+      checkIfNumbersVisible()
+
+      // Перевіряємо при прокрутці
+      $(window).on('scroll', function () {
+        checkIfNumbersVisible()
+      })
+    })
 
     $(document).ready(function () {
       $('.tarifsContent > div').hide()
