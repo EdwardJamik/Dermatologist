@@ -1091,53 +1091,109 @@
     })
 
     $(document).ready(function () {
+      const $showMoreBtn = $('.show-more-btn')
+      let isExpanded = false
 
-      $('.show-more-btn').click(function () {
-        const $hiddenItems = $('.list-appear-education li.hidden:not(.visible)')
+      $showMoreBtn.click(function () {
+        if (!isExpanded) {
+          // Розгортання списку
+          expandList()
+        } else {
+          // Згортання списку
+          collapseList()
+        }
+
+        isExpanded = !isExpanded
+        $showMoreBtn.css({
+          'display': 'none'
+        })
+      })
+
+      function expandList() {
+        const $hiddenItems = $('.list-appear-education li.hidden')
         const $lastItem = $('.list-appear-education li.last-item')
 
         $lastItem.removeClass('last-item')
-        if ($hiddenItems.length > 0) {
 
-          $hiddenItems.each(function (index) {
-            const $item = $(this)
+        $hiddenItems.each(function (index) {
+          const $item = $(this)
 
-            $item.css({ 'position': 'absolute', 'visibility': 'hidden', 'display': 'block' })
-            const height = $item.height()
-            $item.css({ 'position': '', 'visibility': '', 'display': '', 'height': '0' })
+          // Спочатку виставляємо стиль display block, але opacity 0
+          $item.removeClass('hidden').addClass('animating')
 
-            setTimeout(function () {
-              $item.removeClass('hidden')
-              $item.addClass('visible')
-              $item.css('height', height + 'px').css('opacity', '1')
+          // Отримаємо висоту елемента
+          const height = $item.outerHeight()
 
-              setTimeout(function () {
-                $item.css('height', 'auto')
-
-              }, 1000)
-            }, 500 * index)
+          // Починаємо з нульової висоти
+          $item.css({
+            'height': '0',
+            'opacity': '0',
+            'overflow': 'hidden'
           })
 
-          $(this).css('display', 'none')
-        } else {
-          const $visibleItems = $('.list-appear-education li.hidden.visible')
+          // Запускаємо анімацію з невеликою затримкою для кожного елемента
+          setTimeout(function () {
+            $item.css({
+              'transition': 'height 0.4s ease, opacity 0.4s ease',
+              'height': height + 'px',
+              'opacity': '1'
+            })
 
-          $($visibleItems.get().reverse()).each(function (index) {
-            const $item = $(this)
+            // Після завершення анімації видаляємо обмеження висоти
             setTimeout(function () {
-              $item.css('height', $item.height() + 'px')
+              $item.css({
+                'height': '',
+                'overflow': '',
+                'transition': ''
+              }).addClass('visible').removeClass('animating')
+            }, 450)
+          }, 100 * index)
+        })
+      }
 
+      function collapseList() {
+        const $visibleItems = $('.list-appear-education li.visible')
+        const lastIndex = $visibleItems.length - 1
+
+        $($visibleItems.get().reverse()).each(function (index) {
+          const $item = $(this)
+          const height = $item.outerHeight()
+
+          setTimeout(function () {
+            $item.addClass('animating').css({
+              'height': height + 'px',
+              'overflow': 'hidden',
+              'transition': 'height 0.4s ease, opacity 0.4s ease'
+            })
+
+            // Запускаємо анімацію згортання
+            setTimeout(function () {
+              $item.css({
+                'height': '0',
+                'opacity': '0'
+              })
+
+              // Після завершення ховаємо елемент
               setTimeout(function () {
-                $item.css('height', '0').css('opacity', '0')
+                $item.removeClass('visible')
+                  .addClass('hidden')
+                  .removeClass('animating')
+                  .css({
+                    'height': '',
+                    'opacity': '',
+                    'overflow': '',
+                    'transition': ''
+                  })
 
-                setTimeout(function () {
-                  $item.removeClass('visible')
-                }, 600)
-              }, 5)
-            }, 100 * index)
-          })
-        }
-      })
+                // Додаємо клас last-item до останнього видимого елемента
+                if (index === lastIndex) {
+                  $('.list-appear-education li:not(.hidden)').last().addClass('last-item')
+                }
+              }, 450)
+            }, 10)
+          }, 100 * index)
+        })
+      }
     })
 
     $(document).ready(function () {
