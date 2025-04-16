@@ -612,7 +612,7 @@ main {
                     position: absolute;
                     height: 32px;
                     width: 2px;
-                    border: 0.8px dashed #c52226;
+                    border-right: 0.8px dashed #c52226;
                     left: 50%;
                     transform: translate(-50%, 0%);
                   }
@@ -797,7 +797,7 @@ main {
                       position: absolute;
                       height: 32px;
                       width: 2px;
-                      border: 0.8px dashed #c52226;
+                      border-right: 0.8px dashed #c52226;
                       left: 50%;
                       transform: translate(-50%, 0%);
                     }
