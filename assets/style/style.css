@@ -195,9 +195,9 @@ main {
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
+  margin-bottom: 8px;
 }
 .top_content .container h2 {
-  max-width: 250px;
   font-family: Montserrat;
   font-weight: 400;
   font-size: 14px;
@@ -349,9 +349,10 @@ main {
 }
 .about_me .container .about_list .first {
   background-image: url("../images/first_block_bg.svg");
-  background-position: bottom;
-  background-size: cover;
-  height: 342px;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 342px;
 }
 .about_me .container .about_list .first ul {
   display: flex;
@@ -393,8 +394,9 @@ main {
 }
 .about_me .container .about_list .second {
   background-image: url("../images/second_block_bg.svg");
-  background-position: top;
-  background-size: cover;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .about_me .container .about_list .second .icon {
   background-color: #fff;
@@ -435,8 +437,9 @@ main {
 }
 .about_me .container .about_list .third {
   background-image: url("../images/third_block_bg.svg");
-  background-position: top;
-  background-size: cover;
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .about_me .container .about_list .third .icon {
   background-color: #fff;
@@ -534,6 +537,15 @@ main {
   line-height: 155%;
   letter-spacing: 0%;
   margin-bottom: 12px;
+  text-align: justify;
+}
+.history .container .text p b {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 .history .container .text button {
   background: transparent;

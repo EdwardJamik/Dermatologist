@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "nllstyled";
 
-$bg: #ece6e0;
-$red: #c52226;
-$white: #fff;
-
 main {
   position: relative;
   max-width: 520px;
@@ -27,10 +23,10 @@ main {
       letter-spacing: 0%;
       text-align: center;
       vertical-align: middle;
+      margin-bottom: 8px;
     }
 
     & h2 {
-      max-width: 250px;
       font-family: Montserrat;
       font-weight: 400;
       font-size: 14px;
@@ -195,9 +191,10 @@ main {
 
       & .first {
         background-image: url("../images/first_block_bg.svg");
-        background-position: bottom;
-        background-size: cover;
-        height: 342px;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 342px;
 
         & ul {
           display: flex;
@@ -245,8 +242,9 @@ main {
 
       & .second {
         background-image: url("../images/second_block_bg.svg");
-        background-position: top;
-        background-size: cover;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         & .icon {
           background-color: #fff;
@@ -292,8 +290,9 @@ main {
 
       & .third {
         background-image: url("../images/third_block_bg.svg");
-        background-position: top;
-        background-size: cover;
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         & .icon {
           background-color: #fff;
@@ -406,6 +405,16 @@ main {
         line-height: 155%;
         letter-spacing: 0%;
         margin-bottom: 12px;
+        text-align: justify;
+
+        & b {
+          font-family: Montserrat;
+          font-size: 14px;
+          line-height: 155%;
+          letter-spacing: 0%;
+          margin-bottom: 12px;
+          font-weight: 600;
+        }
       }
 
       & button {
