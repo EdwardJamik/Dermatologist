@@ -712,7 +712,7 @@ main {
   content: " ";
   position: absolute;
   height: 32px;
-  width: 2px;
+  width: 3px;
   border-right: 0.8px dashed #c52226;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -875,7 +875,7 @@ main {
   content: " ";
   position: absolute;
   height: 32px;
-  width: 2px;
+  width: 3px;
   border-right: 0.8px dashed #c52226;
   left: 50%;
   transform: translate(-50%, 0%);
