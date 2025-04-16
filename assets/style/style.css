@@ -709,13 +709,14 @@ main {
   border-top: 0;
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other::before, .tarifs .container .content .tarifsContent .second .price ul li.other::before, .tarifs .container .content .tarifsContent .third .price ul li.other::before {
-  content: " ";
+  content: "";
   position: absolute;
   height: 32px;
-  width: 2px;
-  border-left: 0.5px dashed #c52226;
-  right: 50%;
-  transform: translate(-50%, 0%);
+  width: 0;
+  border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
+  left: 50%; /* используйте left вместо right */
+  transform: translateX(-50%); /* только по X оси */
+  z-index: 1; /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .us, .tarifs .container .content .tarifsContent .second .price ul li.other .us, .tarifs .container .content .tarifsContent .third .price ul li.other .us {
   margin: 0 auto;
@@ -872,13 +873,14 @@ main {
   border-top: 0;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other::before, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other::before, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other::before {
-  content: " ";
+  content: "";
   position: absolute;
   height: 32px;
-  width: 2px;
-  border-left: 0.5px dashed #c52226;
-  right: 50%;
-  transform: translate(-50%, 0%);
+  width: 0;
+  border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
+  left: 50%; /* используйте left вместо right */
+  transform: translateX(-50%); /* только по X оси */
+  z-index: 1; /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us {
   margin: 0 auto;
