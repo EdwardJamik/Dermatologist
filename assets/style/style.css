@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *:before,
@@ -477,7 +478,28 @@ main {
 
 .history {
   margin-top: 64px;
-  max-height: 806px;
+}
+.history .container .text {
+  position: relative;
+  overflow: hidden;
+}
+.history .container .text p {
+  margin-bottom: 15px;
+}
+.history .container .text-container {
+  height: auto;
+  transition: height 0.8s ease;
+  overflow: hidden;
+}
+.history .container .hidden-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+}
+.history .container .hidden-content.visible {
+  opacity: 1;
+  height: auto;
 }
 .history .container h4 {
   font-family: Cormorant Garamond;
@@ -502,7 +524,7 @@ main {
   background-color: #fff;
   background-image: url("../images/historyIconBg.svg");
   background-repeat: no-repeat;
-  background-position: 90% 30%;
+  background-position: 90% 86px;
   border-radius: 20px 20px 34px 34px;
 }
 .history .container .text p {
@@ -1069,6 +1091,24 @@ main {
   left: 0;
   right: 0;
 }
+.education .container ul li.last-item::after {
+  display: none;
+}
+.education .container ul li.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.8s ease;
+  padding: 0;
+  margin-bottom: 1px;
+}
+.education .container ul li.visible {
+  max-height: 300px; /* Достатня висота для вмісту */
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 20px; /* Відстань між елементами списку, можна налаштувати */
+}
 .education .container ul li > p {
   font-family: Cormorant Garamond;
   font-weight: 400;
@@ -1116,6 +1156,14 @@ main {
   width: 100%;
   display: block;
   max-width: 110px;
+}
+.education .container .about_button.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
 }
 .education .container .slider_certificate {
   margin-top: 64px;

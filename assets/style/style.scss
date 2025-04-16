@@ -342,8 +342,35 @@ main {
 
 .history {
   margin-top: 64px;
-  max-height: 806px;
+  // max-height: 806px;
   & .container {
+    .text {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .text p {
+      margin-bottom: 15px;
+    }
+
+    .text-container {
+      height: auto;
+      transition: height 0.8s ease;
+      overflow: hidden;
+    }
+
+    .hidden-content {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.8s ease;
+    }
+
+    .hidden-content.visible {
+      opacity: 1;
+      height: auto;
+    }
+
     & h4 {
       font-family: Cormorant Garamond;
       font-weight: 400;
@@ -369,7 +396,7 @@ main {
       background-color: #fff;
       background-image: url("../images/historyIconBg.svg");
       background-repeat: no-repeat;
-      background-position: 90% 30%;
+      background-position: 90% 86px;
       border-radius: 20px 20px 34px 34px;
 
       & p {
@@ -1036,6 +1063,33 @@ main {
           }
         }
 
+        &.last-item {
+          &::after {
+            display: none;
+          }
+        }
+
+        &.hidden {
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transform: translateY(20px);
+          transition:
+            opacity 0.6s ease,
+            transform 0.6s ease,
+            max-height 0.8s ease;
+          // margin: 0;
+          padding: 0;
+          margin-bottom: 1px;
+        }
+
+        &.visible {
+          max-height: 300px; /* Достатня висота для вмісту */
+          opacity: 1;
+          transform: translateY(0);
+          margin-bottom: 20px; /* Відстань між елементами списку, можна налаштувати */
+        }
+
         & > p {
           font-family: Cormorant Garamond;
           font-weight: 400;
@@ -1086,6 +1140,19 @@ main {
       width: 100%;
       display: block;
       max-width: 110px;
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease,
+          height 0.3s ease,
+          padding 0.3s ease,
+          margin 0.3s ease;
+      }
     }
 
     & .slider_certificate {
