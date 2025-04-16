@@ -686,7 +686,7 @@ main {
   justify-content: center;
   padding: 16px 0;
   border-radius: 12px;
-  border: 0.5px dashed #c52226;
+  border: 1px dashed #c52226;
   height: 96px;
 }
 .tarifs .container .content .tarifsContent .first .price ul li.ua .title, .tarifs .container .content .tarifsContent .second .price ul li.ua .title, .tarifs .container .content .tarifsContent .third .price ul li.ua .title {
@@ -850,7 +850,7 @@ main {
   justify-content: center;
   padding: 16px 0;
   border-radius: 12px;
-  border: 0.5px dashed #c52226;
+  border: 1px dashed #c52226;
   height: 96px;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.ua .title {
