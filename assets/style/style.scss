@@ -470,6 +470,7 @@ main {
         & .buttons {
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
           gap: 5px;
           margin-bottom: 32px;
 
@@ -725,6 +726,10 @@ main {
                 }
               }
             }
+
+            & .red_button {
+              margin-top: 20px;
+            }
           }
 
           & .consultation {
@@ -748,6 +753,16 @@ main {
               letter-spacing: 0%;
               text-align: center;
               margin-bottom: 16px;
+
+              & b {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 155%;
+                letter-spacing: 0%;
+                text-align: center;
+                margin-bottom: 16px;
+              }
             }
 
             & .consultationPrice {
@@ -1368,6 +1383,37 @@ main {
     margin: 0 auto;
     height: 72px;
     margin: 0 auto;
+  }
+}
+
+.otherLink {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    height: 28px;
+    color: #1c1c1c;
+
+    &:visited {
+      text-decoration: none;
+      color: #1c1c1c !important;
+    }
   }
 }
 
