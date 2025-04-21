@@ -825,12 +825,12 @@ main {
 .tarifs .container .content .tarifsContent .first .consultation > h4, .tarifs .container .content .tarifsContent .second .consultation > h4, .tarifs .container .content .tarifsContent .third .consultation > h4 {
   font-family: Cormorant Garamond;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
+  font-size: 24px;
+  line-height: 125%;
   letter-spacing: -2%;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .tarifs .container .content .tarifsContent .first .consultation p, .tarifs .container .content .tarifsContent .second .consultation p, .tarifs .container .content .tarifsContent .third .consultation p {
   font-family: Montserrat;
