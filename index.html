@@ -206,7 +206,8 @@
                     </li>
                   </ul>
 
-                  <a href="https://t.me/drmyts_bot?start=w38923905--acne" class="red_button ">ЗАПИСАТИСЬ<br />НА
+                  <a href="https://t.me/drmyts_bot?start=w38923905--acne" target="_blank"
+                    class="red_button join_link">ЗАПИСАТИСЬ<br />НА
                     КОНСУЛЬТАЦІЮ</a>
                 </div>
 
@@ -245,14 +246,15 @@
                   </div>
                 </div>
 
-                <a href="https://t.me/drmyts_bot?start=w38923905--acne-control" class="red_button">Записатись<br />на
+                <a href="https://t.me/drmyts_bot?start=w38923905--acne-control" target="_blank"
+                  class="red_button join_link">Записатись<br />на
                   консультацію</a>
 
               </div>
 
               <div class="third">
                 <h4>Консультація <br />трихолога:</h4>
-                <p>Комплексне лікування <br />алопеція <br /> <b>підтримка: 3 місяці</b>
+                <p>Комплексне лікування алопеція <br /> <b>підтримка: 3 місяці</b>
                 </p>
                 <hr>
                 <div class="price">
@@ -307,7 +309,8 @@
                       дизбалансів
                     </li>
                   </ul>
-                  <a href="https://t.me/drmyts_bot?start=w38923905--trychology" class="red_button">Записатись<br />на
+                  <a href="https://t.me/drmyts_bot?start=w38923905--trychology" target="_blank"
+                    class="red_button join_link">Записатись<br />на
                     консультацію</a>
                 </div>
                 <hr>
@@ -344,8 +347,8 @@
                   </div>
                 </div>
 
-                <a href="https://t.me/drmyts_bot?start=w38923905--trychology-control"
-                  class="red_button">Записатись<br />на консультацію</a>
+                <a href="https://t.me/drmyts_bot?start=w38923905--trychology-control" target="_blank"
+                  class="red_button join_link">Записатись<br />на консультацію</a>
 
               </div>
 
@@ -422,7 +425,8 @@
                       </ul>
                     </li>
                   </ul>
-                  <a href="https://t.me/drmyts_bot?start=w38923905--selfcare" class="red_button ">Записатись</a>
+                  <a href="https://t.me/drmyts_bot?start=w38923905--selfcare" target="_blank"
+                    class="red_button join_link">Записатись</a>
                 </div>
 
                 <hr>
@@ -484,7 +488,8 @@
 
                 <hr>
 
-                <a href="https://t.me/drmyts_bot?start=w38923905--dermatology" class="red_button">Записатись<br />на
+                <a href="https://t.me/drmyts_bot?start=w38923905--dermatology" target="_blank"
+                  class="red_button join_link">Записатись<br />на
                   консультацію</a>
 
               </div>
@@ -912,6 +917,29 @@
 
   </main>
   <script src="./assets/scripts/telegram-web-app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var links = document.querySelectorAll('.join_link')
+
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function (e) {
+          e.preventDefault()
+
+          var url = this.href
+
+          window.location.href = url
+
+          setTimeout(function () {
+            if (window.Telegram && window.Telegram.WebApp) {
+              Telegram.WebApp.close()
+            }
+          }, 100)
+        })
+      }
+    });
+  </script>
+
   <script>
     $(document).ready(function () {
       checkElementsInView()
