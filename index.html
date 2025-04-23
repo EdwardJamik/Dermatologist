@@ -89,7 +89,7 @@
             </div>
             <div class="third">
               <div class="icon"></div>
-              <h4>Комлексний підхід</h4>
+              <h4>Комплексний підхід</h4>
               <p>
                 Корекція харчування, сну, стресу,<br /> дефіцитів та способу життя
               </p>
@@ -151,8 +151,8 @@
             <div class="tarifsContent">
               <div class="first active">
                 <h4>Лікування Акне:</h4>
-                <p>Комлексне лікування акне<br />
-                  <b>тривалість: 3 місяці</b>
+                <p>Комплексне лікування акне<br />
+                  <b>підтримка: 3 місяці</b>
                 </p>
                 <hr>
                 <div class="price">
@@ -206,7 +206,8 @@
                     </li>
                   </ul>
 
-                  <a href="#" class="red_button big">ЗАПИСАТИСЬ<br />НА КОНСУЛЬТАЦІЮ</a>
+                  <a href="https://t.me/drmyts_bot?start=w38923905--acne" class="red_button ">ЗАПИСАТИСЬ<br />НА
+                    КОНСУЛЬТАЦІЮ</a>
                 </div>
 
                 <hr>
@@ -244,13 +245,14 @@
                   </div>
                 </div>
 
-                <a href="#" class="red_button big">Записатись<br />на консультацію</a>
+                <a href="https://t.me/drmyts_bot?start=w38923905--acne-control" class="red_button">Записатись<br />на
+                  консультацію</a>
 
               </div>
 
               <div class="third">
                 <h4>Консультація <br />трихолога:</h4>
-                <p>Андрогенетична/телогенова<br />алопеція <br /> <b>тривалість: 3 місяці</b>
+                <p>Андрогенетична/телогенова<br />алопеція <br /> <b>підтримка: 3 місяці</b>
                 </p>
                 <hr>
                 <div class="price">
@@ -305,7 +307,8 @@
                       дизбалансів
                     </li>
                   </ul>
-                  <a href="#" class="red_button big">Записатись<br />на консультацію</a>
+                  <a href="https://t.me/drmyts_bot?start=w38923905--trychology" class="red_button">Записатись<br />на
+                    консультацію</a>
                 </div>
                 <hr>
                 <div class="consultation">
@@ -341,7 +344,8 @@
                   </div>
                 </div>
 
-                <a href="#" class="red_button big">Записатись<br />на консультацію</a>
+                <a href="https://t.me/drmyts_bot?start=w38923905--trychology-control"
+                  class="red_button">Записатись<br />на консультацію</a>
 
               </div>
 
@@ -418,14 +422,14 @@
                       </ul>
                     </li>
                   </ul>
-                  <a href="#" class="red_button big">Записатись</a>
+                  <a href="https://t.me/drmyts_bot?start=w38923905--selfcare" class="red_button ">Записатись</a>
                 </div>
 
                 <hr>
 
                 <div class="consultation">
                   <div class="number">02</div>
-                  <h4>Дерматологічна консультація</h4>
+                  <h4 class="dermantolog">Дерматологічна консультація</h4>
                   <p>Алергічні, бактеріальні, вірусні захворювання, які <b>не потребують підтримки лікування</b> </p>
 
                   <hr>
@@ -480,7 +484,8 @@
 
                 <hr>
 
-                <a href="#" class="red_button big">Записатись<br />на консультацію</a>
+                <a href="https://t.me/drmyts_bot?start=w38923905--dermatology" class="red_button">Записатись<br />на
+                  консультацію</a>
 
               </div>
             </div>
@@ -528,7 +533,7 @@
                 <img style="max-width: 240px; height: 204px;" src="./assets/images/message_2_2.png" alt="Message" />
                 <img style="max-width: 240px; height: 204px;" src="./assets/images/message_2_3.png" alt="Message" />
                 <img style="max-width: 240px; height: 204px;" src="./assets/images/message_2_4.png" alt="Message" />
-                <img style="max-width: 240px; height: 204px;" src="./assets/images/message_2_5.png" alt="Message" />
+                <img style="max-width: 156px; height: 204px;" src="./assets/images/message_2_5.png" alt="Message" />
                 <img style="max-width: 240px; height: 204px;" src="./assets/images/message_2_4.png" alt="Message" />
               </div>
 
@@ -967,8 +972,44 @@
     })
 
     document.addEventListener('DOMContentLoaded', function () {
+      // Функція для ініціалізації слайдера з IntersectionObserver
+      function initSliderWithVisibilityControl(sliderSelector, slickOptions) {
+        // Ініціалізуємо слайдер з автоплеєм вимкненим за замовчуванням
+        const sliderElement = $(sliderSelector)
+        const defaultOptions = {
+          autoplay: false,
+          pauseOnHover: false
+        }
 
-      $('.sliders .messageSlider').slick({
+        // Об'єднуємо опції
+        const options = { ...defaultOptions, ...slickOptions }
+
+        // Ініціалізуємо слайдер
+        sliderElement.slick(options)
+
+        // Створюємо IntersectionObserver для відстеження видимості
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Якщо слайдер видимий - запускаємо автоплей
+              sliderElement.slick('slickPlay')
+            } else {
+              // Якщо слайдер не видимий - зупиняємо автоплей
+              sliderElement.slick('slickPause')
+            }
+          })
+        }, {
+          root: null, // спостереження відносно вікна перегляду
+          rootMargin: '0px', // без додаткових відступів
+          threshold: 0.3 // елемент вважається видимим, коли 30% його площі у вікні перегляду
+        })
+
+        // Починаємо відстежувати видимість слайдера
+        observer.observe(sliderElement[0])
+      }
+
+      // Ініціалізуємо слайдери з контролем видимості
+      initSliderWithVisibilityControl('.sliders .messageSlider', {
         infinite: false,
         variableWidth: true,
         speed: 1000,
@@ -979,12 +1020,10 @@
         slidesToScroll: 1,
         arrows: false,
         dots: false,
-        pauseOnHover: false,
-        autoplay: true,
         autoplaySpeed: 3000
       })
 
-      $('.sliders .photoSlider').slick({
+      initSliderWithVisibilityControl('.sliders .photoSlider', {
         infinite: false,
         variableWidth: true,
         speed: 1000,
@@ -995,12 +1034,10 @@
         slidesToScroll: 1,
         arrows: false,
         dots: false,
-        pauseOnHover: false,
-        autoplay: true,
         autoplaySpeed: 3000
       })
 
-      $('.slider_certificate .content').slick({
+      initSliderWithVisibilityControl('.slider_certificate .content', {
         infinite: false,
         variableWidth: true,
         speed: 1000,
@@ -1010,10 +1047,8 @@
         useTransform: true,
         slidesToScroll: 1,
         arrows: false,
-        dots: false,
-        pauseOnHover: false,
+        dots: false
       })
-
     })
 
 

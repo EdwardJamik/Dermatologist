@@ -743,6 +743,16 @@ main {
               text-align: center;
               text-transform: uppercase;
               margin-bottom: 8px;
+
+              &.dermantolog {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 155%;
+                letter-spacing: 0%;
+                text-align: center;
+                vertical-align: bottom;
+              }
             }
 
             & p {
