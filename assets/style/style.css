@@ -833,13 +833,13 @@ main {
   margin-bottom: 8px;
 }
 .tarifs .container .content .tarifsContent .first .consultation > h4.dermantolog, .tarifs .container .content .tarifsContent .second .consultation > h4.dermantolog, .tarifs .container .content .tarifsContent .third .consultation > h4.dermantolog {
-  font-family: Montserrat;
+  font-family: Cormorant Garamond;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 155%;
-  letter-spacing: 0%;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -2%;
   text-align: center;
-  vertical-align: bottom;
+  text-transform: uppercase;
 }
 .tarifs .container .content .tarifsContent .first .consultation p, .tarifs .container .content .tarifsContent .second .consultation p, .tarifs .container .content .tarifsContent .third .consultation p {
   font-family: Montserrat;
