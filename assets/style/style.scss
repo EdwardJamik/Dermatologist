@@ -70,7 +70,6 @@ main {
         opacity: 0.05;
         left: 50%;
         transform: translate(-50%, 0%);
-        // top: -50px;
         top: -40px;
         & > span {
           display: block;
@@ -342,7 +341,6 @@ main {
 
 .history {
   margin-top: 64px;
-  // max-height: 806px;
   & .container {
     .text {
       position: relative;
@@ -547,7 +545,6 @@ main {
             letter-spacing: 0%;
             text-align: center;
             vertical-align: bottom;
-            // margin-bottom: 24px;
 
             & b {
               font-family: Montserrat;
@@ -805,11 +802,9 @@ main {
 
               & .buttons {
                 display: flex;
-                // flex-wrap: wrap;
                 flex-direction: column;
                 justify-content: center;
                 gap: 5px;
-                // margin-bottom: 20px;
                 margin: 0 auto 20px;
 
                 & button {
@@ -1003,7 +998,6 @@ main {
 
 .reviews {
   margin-top: 64px;
-  // & .container {
   & .number {
     width: 40px;
     height: 40px;
@@ -1086,7 +1080,6 @@ main {
           padding-left: 15px;
           margin-bottom: 24px;
           & img {
-            // padding: 0 10px;
             margin-right: 8px;
           }
         }
@@ -1094,15 +1087,12 @@ main {
         & .photoSlider {
           padding-left: 15px;
           & img {
-            // width: 180px !important;
-            // height: 225px;
             margin-right: 8px;
           }
         }
       }
     }
   }
-  // }
 }
 
 .education {
@@ -1174,16 +1164,15 @@ main {
             opacity 0.6s ease,
             transform 0.6s ease,
             max-height 0.8s ease;
-          // margin: 0;
           padding: 0;
           margin-bottom: 1px;
         }
 
         &.visible {
-          max-height: 300px; /* Достатня висота для вмісту */
+          max-height: 300px;
           opacity: 1;
           transform: translateY(0);
-          margin-bottom: 20px; /* Відстань між елементами списку, можна налаштувати */
+          margin-bottom: 20px;
         }
 
         & > p {
@@ -1520,9 +1509,6 @@ main {
   }
 }
 
-// First, let's add some basic animation classes
-
-// For fade-in effects
 .fade-in {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
@@ -1532,7 +1518,6 @@ main {
   }
 }
 
-// For slide-up effects
 .slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -1546,7 +1531,6 @@ main {
   }
 }
 
-// For staggered children animations
 .stagger-children {
   > * {
     opacity: 0;
@@ -1562,7 +1546,6 @@ main {
   }
 }
 
-// For the list elements to appear one by one
 .list-appear {
   li {
     opacity: 0;
@@ -1582,7 +1565,6 @@ main {
   }
 }
 
-// For sections to fade in from left
 .fade-in-left {
   opacity: 0;
   transform: translateX(-30px);
@@ -1596,7 +1578,6 @@ main {
   }
 }
 
-// For sections to fade in from right
 .fade-in-right {
   opacity: 0;
   transform: translateX(30px);
@@ -1627,21 +1608,17 @@ main {
   display: inline-block;
   font-weight: bold;
 
-  // Стиль для чисел під час анімації
   &.animated {
     transition: color 0.3s ease;
   }
 
-  // Можна додати підсвічування чисел на кінець анімації
   &.finished {
-    color: #ff4d4d; // або інший колір для підсвічування результату
+    color: #ff4d4d;
     transition: color 0.5s ease;
   }
 }
 
-// Додатковий ефект для контейнера чисел
 .about_list .first.numbers-animated {
-  // Можна додати підсвічування контейнера після анімації
   animation: pulse 1s ease-in-out;
 }
 

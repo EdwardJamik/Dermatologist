@@ -1202,10 +1202,10 @@ main {
   margin-bottom: 1px;
 }
 .education .container ul li.visible {
-  max-height: 300px; /* Достатня висота для вмісту */
+  max-height: 300px;
   opacity: 1;
   transform: translateY(0);
-  margin-bottom: 20px; /* Відстань між елементами списку, можна налаштувати */
+  margin-bottom: 20px;
 }
 .education .container ul li > p {
   font-family: Cormorant Garamond;

@@ -936,25 +936,18 @@
   <script>
 
     document.addEventListener('DOMContentLoaded', function () {
-      // Знаходимо всі блоки консультацій з кнопками
       const consultationPriceBlocks = document.querySelectorAll('.consultationPrice')
 
-      // Для кожного блоку консультацій
       consultationPriceBlocks.forEach(function (priceBlock) {
-        // Знаходимо кнопки та елементи цін у поточному блоці
         const buttons = priceBlock.querySelectorAll('.buttons button')
         const uaPrice = priceBlock.querySelector('.ua .price')
         const usPrice = priceBlock.querySelector('.us .price')
         const euPrice = priceBlock.querySelector('.eu .price')
 
-        // Шукаємо найближче посилання .join_link, яке йде після блоку
-        // Спочатку знаходимо батьківський блок .consultation
         const consultationBlock = priceBlock.closest('.consultation')
 
-        // Знаходимо посилання, яке йде після цього блоку .consultation
         let joinLink = null
         if (consultationBlock) {
-          // Шукаємо посилання, яке слідує одразу після блоку .consultation
           let currentElement = consultationBlock
           while (currentElement.nextElementSibling) {
             if (currentElement.nextElementSibling.classList.contains('join_link')) {
@@ -964,7 +957,6 @@
             currentElement = currentElement.nextElementSibling
           }
 
-          // Якщо посилання не знайдено як наступний елемент, шукаємо його у батьківському елементі
           if (!joinLink) {
             const parentBlock = consultationBlock.parentNode
             if (parentBlock) {
@@ -973,43 +965,34 @@
           }
         }
 
-        // Зберігаємо посилання як властивість блоку для використання в обробниках подій
         priceBlock.relatedJoinLink = joinLink
 
-        // Додаємо обробник подій для кожної кнопки в поточному блоці
         buttons.forEach(button => {
           button.addEventListener('click', function () {
-            // Знімаємо активний клас з усіх кнопок у поточному блоці
             buttons.forEach(btn => btn.classList.remove('active'))
 
-            // Додаємо активний клас до натиснутої кнопки
             this.classList.add('active')
 
-            // Оновлюємо ціни
             const id = this.id
             const prices = id.split(' ')
 
             if (prices.length >= 3) {
-              // Ціна для України
               const uaData = prices[0].split('-')
               if (uaData.length === 3 && uaPrice) {
                 uaPrice.innerHTML = uaData[2] + ' <span>ГРН</span>'
               }
 
-              // Ціна для США
               const usData = prices[1].split('-')
               if (usData.length === 3 && usPrice) {
                 usPrice.innerHTML = usData[2] + ' <span>USD</span>'
               }
 
-              // Ціна для ЄС
               const euData = prices[2].split('-')
               if (euData.length === 3 && euPrice) {
                 euPrice.innerHTML = euData[2] + ' <span>EUR</span>'
               }
             }
 
-            // Оновлюємо посилання
             const link = this.getAttribute('data-link')
             if (link && priceBlock.relatedJoinLink) {
               priceBlock.relatedJoinLink.href = link
@@ -1101,43 +1084,34 @@
     })
 
     document.addEventListener('DOMContentLoaded', function () {
-      // Функція для ініціалізації слайдера з IntersectionObserver
       function initSliderWithVisibilityControl(sliderSelector, slickOptions) {
-        // Ініціалізуємо слайдер з автоплеєм вимкненим за замовчуванням
         const sliderElement = $(sliderSelector)
         const defaultOptions = {
           autoplay: false,
           pauseOnHover: false
         }
 
-        // Об'єднуємо опції
         const options = { ...defaultOptions, ...slickOptions }
-
-        // Ініціалізуємо слайдер
         sliderElement.slick(options)
 
-        // Створюємо IntersectionObserver для відстеження видимості
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              // Якщо слайдер видимий - запускаємо автоплей
               sliderElement.slick('slickPlay')
             } else {
-              // Якщо слайдер не видимий - зупиняємо автоплей
               sliderElement.slick('slickPause')
             }
           })
         }, {
-          root: null, // спостереження відносно вікна перегляду
-          rootMargin: '0px', // без додаткових відступів
-          threshold: 0.3 // елемент вважається видимим, коли 30% його площі у вікні перегляду
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.3
         })
 
-        // Починаємо відстежувати видимість слайдера
+
         observer.observe(sliderElement[0])
       }
 
-      // Ініціалізуємо слайдери з контролем видимості
       initSliderWithVisibilityControl('.sliders .messageSlider', {
         infinite: true,
         variableWidth: true,
@@ -1182,42 +1156,33 @@
 
 
     $(document).ready(function () {
-      // Функція для плавної анімації збільшення чисел
       function animateNumbers() {
         $('.about_list .first li span b').each(function () {
           const $this = $(this)
 
-          // Перевіряємо, чи був елемент вже анімований
           if (!$this.hasClass('animated')) {
 
-            // Отримуємо кінцеве значення
             let endValue = parseInt($this.text())
 
-            // Видаляємо знак "+" з тексту, якщо він є
             if ($this.text().indexOf('+') !== -1) {
               endValue = parseInt($this.text())
               const hasPlus = true
             }
 
-            // Установлюємо початкове значення на 0
             $this.text('0')
             $this.addClass('animated')
 
-            // Вираховуємо крок для анімації в залежності від кінцевого значення
-            const duration = 2000 // Тривалість анімації в мілісекундах
+            const duration = 2000
             let step = 1
 
-            // Для більших чисел збільшуємо крок
             if (endValue > 100) {
               step = Math.ceil(endValue / 100)
             }
 
-            // Лічильник та інтервал для анімації числа
             let current = 0
             const interval = setInterval(function () {
               current += step
 
-              // Якщо досягли або перевищили кінцеве значення, встановлюємо кінцеве значення і очищаємо інтервал
               if (current >= endValue) {
                 clearInterval(interval)
                 $this.text(endValue + ($this.text().indexOf('+') !== -1 ? '+' : ''))
@@ -1229,7 +1194,6 @@
         })
       }
 
-      // Функція перевірки, чи елемент в зоні видимості
       function isElementInViewport(el) {
         const rect = el.getBoundingClientRect()
         return (
@@ -1238,7 +1202,6 @@
         )
       }
 
-      // Перевірка чи блок з числами потрапив у видиму зону при прокрутці
       function checkIfNumbersVisible() {
         const numbersBlock = $('.about_list .first')
         if (isElementInViewport(numbersBlock[0]) && !numbersBlock.hasClass('numbers-animated')) {
@@ -1247,10 +1210,8 @@
         }
       }
 
-      // Перевіряємо при завантаженні сторінки
       checkIfNumbersVisible()
 
-      // Перевіряємо при прокрутці
       $(window).on('scroll', function () {
         checkIfNumbersVisible()
       })
@@ -1263,23 +1224,18 @@
 
       $readMoreBtn.click(function () {
         if (!expanded) {
-          // Розраховуємо висоту контенту
           $hiddenContent.css('height', 'auto')
           $hiddenContent.addClass('visible')
 
-          // Змінюємо текст кнопки
           $readMoreBtn.text('Згорнути')
           expanded = true
         } else {
-          // Ховаємо вміст
           $hiddenContent.removeClass('visible')
 
-          // Після завершення анімації прозорості
           setTimeout(function () {
             $hiddenContent.css('height', '0')
           }, 100)
 
-          // Змінюємо текст кнопки
           $readMoreBtn.text('Дивитись далі')
           expanded = false
         }
@@ -1292,10 +1248,8 @@
 
       $showMoreBtn.click(function () {
         if (!isExpanded) {
-          // Розгортання списку
           expandList()
         } else {
-          // Згортання списку
           collapseList()
         }
 
@@ -1314,20 +1268,16 @@
         $hiddenItems.each(function (index) {
           const $item = $(this)
 
-          // Спочатку виставляємо стиль display block, але opacity 0
           $item.removeClass('hidden').addClass('animating')
 
-          // Отримаємо висоту елемента
           const height = $item.outerHeight()
 
-          // Починаємо з нульової висоти
           $item.css({
             'height': '0',
             'opacity': '0',
             'overflow': 'hidden'
           })
 
-          // Запускаємо анімацію з невеликою затримкою для кожного елемента
           setTimeout(function () {
             $item.css({
               'transition': 'height 0.4s ease, opacity 0.4s ease',
@@ -1335,7 +1285,6 @@
               'opacity': '1'
             })
 
-            // Після завершення анімації видаляємо обмеження висоти
             setTimeout(function () {
               $item.css({
                 'height': '',
@@ -1362,14 +1311,12 @@
               'transition': 'height 0.4s ease, opacity 0.4s ease'
             })
 
-            // Запускаємо анімацію згортання
             setTimeout(function () {
               $item.css({
                 'height': '0',
                 'opacity': '0'
               })
 
-              // Після завершення ховаємо елемент
               setTimeout(function () {
                 $item.removeClass('visible')
                   .addClass('hidden')
@@ -1381,7 +1328,6 @@
                     'transition': ''
                   })
 
-                // Додаємо клас last-item до останнього видимого елемента
                 if (index === lastIndex) {
                   $('.list-appear-education li:not(.hidden)').last().addClass('last-item')
                 }
