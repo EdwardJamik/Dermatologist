@@ -201,6 +201,7 @@ main {
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
+          gap: 10px;
           & li {
             display: flex;
             flex-direction: column;
@@ -596,6 +597,11 @@ main {
                 height: 96px;
 
                 &.ua {
+                  gap: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                   & .title {
                     display: flex;
                     align-items: center;
@@ -629,6 +635,11 @@ main {
                   }
 
                   & .us {
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     margin: 0 auto;
                     & .title {
                       display: flex;
@@ -644,6 +655,11 @@ main {
                   }
 
                   & .eu {
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     margin: 0 auto;
                     & .title {
                       display: flex;
@@ -675,6 +691,7 @@ main {
                   line-height: 100%;
                   letter-spacing: -2%;
                   text-transform: uppercase;
+                  font-variant-numeric: lining-nums;
 
                   & > span {
                     font-family: Cormorant Garamond;
@@ -743,7 +760,6 @@ main {
               text-align: center;
               text-transform: uppercase;
               margin-bottom: 8px;
-
               &.dermantolog {
                 font-family: Cormorant Garamond;
                 font-weight: 400;
@@ -787,6 +803,37 @@ main {
                 margin-bottom: 16px;
               }
 
+              & .buttons {
+                display: flex;
+                // flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                // margin-bottom: 20px;
+                margin: 0 auto 20px;
+
+                & button {
+                  background-color: transparent;
+                  padding: 8px 12px;
+                  font-family: Montserrat;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 140%;
+                  letter-spacing: 0%;
+                  color: #0e0e0e;
+                  border: 1px solid #0e0e0e;
+                  border-radius: 100px;
+                  max-width: 160px;
+                  margin: 0 auto;
+
+                  &.active {
+                    background-color: #c52226;
+                    border: none;
+                    color: #fff;
+                  }
+                }
+              }
+
               & ul {
                 display: flex;
                 flex-direction: column;
@@ -806,6 +853,8 @@ main {
                   height: 96px;
 
                   &.ua {
+                    display: flex;
+                    gap: 10px;
                     & .title {
                       display: flex;
                       align-items: center;
@@ -839,6 +888,11 @@ main {
                     }
 
                     & .us {
+                      display: flex;
+                      gap: 8px;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
                       margin: 0 auto;
                       & .title {
                         display: flex;
@@ -854,6 +908,11 @@ main {
                     }
 
                     & .eu {
+                      display: flex;
+                      gap: 8px;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
                       margin: 0 auto;
                       & .title {
                         display: flex;
@@ -885,6 +944,7 @@ main {
                     line-height: 100%;
                     letter-spacing: -2%;
                     text-transform: uppercase;
+                    font-variant-numeric: lining-nums;
 
                     & > span {
                       font-family: Cormorant Garamond;
@@ -960,7 +1020,7 @@ main {
     letter-spacing: -2%;
     text-align: center;
     text-transform: uppercase;
-
+    font-variant-numeric: lining-nums;
     margin: 32px auto 12px;
   }
 
@@ -1063,7 +1123,7 @@ main {
       letter-spacing: -2%;
       text-align: center;
       text-transform: uppercase;
-
+      font-variant-numeric: lining-nums;
       margin: 32px auto 12px;
     }
 
@@ -1510,6 +1570,10 @@ main {
     transition:
       transform 0.4s ease,
       opacity 0.4s ease;
+
+    & .animated {
+      font-variant-numeric: lining-nums;
+    }
 
     &.visible {
       opacity: 1;

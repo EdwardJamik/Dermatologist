@@ -359,6 +359,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 10px;
 }
 .about_me .container .about_list .first ul li {
   display: flex;
@@ -702,6 +703,13 @@ main {
   border: 1px dashed #c52226;
   height: 96px;
 }
+.tarifs .container .content .tarifsContent .first .price ul li.ua, .tarifs .container .content .tarifsContent .second .price ul li.ua, .tarifs .container .content .tarifsContent .third .price ul li.ua {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .tarifs .container .content .tarifsContent .first .price ul li.ua .title, .tarifs .container .content .tarifsContent .second .price ul li.ua .title, .tarifs .container .content .tarifsContent .third .price ul li.ua .title {
   display: flex;
   align-items: center;
@@ -732,6 +740,11 @@ main {
   z-index: 1; /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .us, .tarifs .container .content .tarifsContent .second .price ul li.other .us, .tarifs .container .content .tarifsContent .third .price ul li.other .us {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .us .title, .tarifs .container .content .tarifsContent .second .price ul li.other .us .title, .tarifs .container .content .tarifsContent .third .price ul li.other .us .title {
@@ -746,6 +759,11 @@ main {
   margin-right: 8px;
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .eu, .tarifs .container .content .tarifsContent .second .price ul li.other .eu, .tarifs .container .content .tarifsContent .third .price ul li.other .eu {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .eu .title, .tarifs .container .content .tarifsContent .second .price ul li.other .eu .title, .tarifs .container .content .tarifsContent .third .price ul li.other .eu .title {
@@ -774,6 +792,7 @@ main {
   line-height: 100%;
   letter-spacing: -2%;
   text-transform: uppercase;
+  font-variant-numeric: lining-nums;
 }
 .tarifs .container .content .tarifsContent .first .price ul li .price > span, .tarifs .container .content .tarifsContent .second .price ul li .price > span, .tarifs .container .content .tarifsContent .third .price ul li .price > span {
   font-family: Cormorant Garamond;
@@ -869,6 +888,32 @@ main {
   opacity: 0.6;
   margin-bottom: 16px;
 }
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 auto 20px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons button, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons button, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons button {
+  background-color: transparent;
+  padding: 8px 12px;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #0e0e0e;
+  border: 1px solid #0e0e0e;
+  border-radius: 100px;
+  max-width: 160px;
+  margin: 0 auto;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons button.active, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons button.active, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons button.active {
+  background-color: #c52226;
+  border: none;
+  color: #fff;
+}
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul {
   display: flex;
   flex-direction: column;
@@ -886,6 +931,10 @@ main {
   border-radius: 12px;
   border: 1px dashed #c52226;
   height: 96px;
+}
+.tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.ua, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.ua, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.ua {
+  display: flex;
+  gap: 10px;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.ua .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.ua .title {
   display: flex;
@@ -917,6 +966,11 @@ main {
   z-index: 1; /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us .title {
@@ -931,6 +985,11 @@ main {
   margin-right: 8px;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .eu, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .eu, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .eu {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .eu .title, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .eu .title, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .eu .title {
@@ -959,6 +1018,7 @@ main {
   line-height: 100%;
   letter-spacing: -2%;
   text-transform: uppercase;
+  font-variant-numeric: lining-nums;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li .price > span, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li .price > span, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li .price > span {
   font-family: Cormorant Garamond;
@@ -1016,6 +1076,7 @@ main {
   letter-spacing: -2%;
   text-align: center;
   text-transform: uppercase;
+  font-variant-numeric: lining-nums;
   margin: 32px auto 12px;
 }
 .reviews > h4 {
@@ -1098,6 +1159,7 @@ main {
   letter-spacing: -2%;
   text-align: center;
   text-transform: uppercase;
+  font-variant-numeric: lining-nums;
   margin: 32px auto 12px;
 }
 .education .container h4 {
@@ -1470,6 +1532,9 @@ main {
   opacity: 0;
   transform: translateY(15px);
   transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.list-appear li .animated {
+  font-variant-numeric: lining-nums;
 }
 .list-appear li.visible {
   opacity: 1;

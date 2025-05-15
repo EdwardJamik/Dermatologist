@@ -220,6 +220,12 @@
 
                   <div class="consultationPrice">
                     <h4>Вартість:</h4>
+                    <div class="buttons">
+                      <button class="active" id="price-ua-1000 price-usd-75 price-eu-50"
+                        data-link="https://t.me/drmyts_bot?start=w38923905--acne-control1m">Підтримка: 1 місяць</button>
+                      <button id="price-ua-2000 price-usd-100 price-eu-80"
+                        data-link="https://t.me/drmyts_bot?start=w38923905--acne-control3m">Підтримка: 3 місяці</button>
+                    </div>
                     <ul>
                       <li class="ua">
                         <div class="title">
@@ -246,7 +252,7 @@
                   </div>
                 </div>
 
-                <a href="https://t.me/drmyts_bot?start=w38923905--acne-control" target="_blank"
+                <a href="https://t.me/drmyts_bot?start=w38923905--acne-control1m" target="_blank"
                   class="red_button join_link">Записатись<br />на
                   консультацію</a>
 
@@ -321,6 +327,14 @@
 
                   <div class="consultationPrice">
                     <h4>Вартість:</h4>
+                    <div class="buttons">
+                      <button class="active" id="price-ua-1000 price-usd-75 price-eu-50"
+                        data-link="https://t.me/drmyts_bot?start=w38923905--trychology-control1m">Підтримка: 1
+                        місяць</button>
+                      <button id="price-ua-2000 price-usd-100 price-eu-80"
+                        data-link="https://t.me/drmyts_bot?start=w38923905--trychology-control3m">Підтримка: 3
+                        місяці</button>
+                    </div>
                     <ul>
                       <li class="ua">
                         <div class="title">
@@ -347,7 +361,7 @@
                   </div>
                 </div>
 
-                <a href="https://t.me/drmyts_bot?start=w38923905--trychology-control" target="_blank"
+                <a href="https://t.me/drmyts_bot?start=w38923905--trychology-control1m" target="_blank"
                   class="red_button join_link">Записатись<br />на консультацію</a>
 
               </div>
@@ -920,6 +934,92 @@
   <script src="./assets/scripts/telegram-web-app.js"></script>
 
   <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Знаходимо всі блоки консультацій з кнопками
+      const consultationPriceBlocks = document.querySelectorAll('.consultationPrice')
+
+      // Для кожного блоку консультацій
+      consultationPriceBlocks.forEach(function (priceBlock) {
+        // Знаходимо кнопки та елементи цін у поточному блоці
+        const buttons = priceBlock.querySelectorAll('.buttons button')
+        const uaPrice = priceBlock.querySelector('.ua .price')
+        const usPrice = priceBlock.querySelector('.us .price')
+        const euPrice = priceBlock.querySelector('.eu .price')
+
+        // Шукаємо найближче посилання .join_link, яке йде після блоку
+        // Спочатку знаходимо батьківський блок .consultation
+        const consultationBlock = priceBlock.closest('.consultation')
+
+        // Знаходимо посилання, яке йде після цього блоку .consultation
+        let joinLink = null
+        if (consultationBlock) {
+          // Шукаємо посилання, яке слідує одразу після блоку .consultation
+          let currentElement = consultationBlock
+          while (currentElement.nextElementSibling) {
+            if (currentElement.nextElementSibling.classList.contains('join_link')) {
+              joinLink = currentElement.nextElementSibling
+              break
+            }
+            currentElement = currentElement.nextElementSibling
+          }
+
+          // Якщо посилання не знайдено як наступний елемент, шукаємо його у батьківському елементі
+          if (!joinLink) {
+            const parentBlock = consultationBlock.parentNode
+            if (parentBlock) {
+              joinLink = parentBlock.querySelector(':scope > .join_link')
+            }
+          }
+        }
+
+        // Зберігаємо посилання як властивість блоку для використання в обробниках подій
+        priceBlock.relatedJoinLink = joinLink
+
+        // Додаємо обробник подій для кожної кнопки в поточному блоці
+        buttons.forEach(button => {
+          button.addEventListener('click', function () {
+            // Знімаємо активний клас з усіх кнопок у поточному блоці
+            buttons.forEach(btn => btn.classList.remove('active'))
+
+            // Додаємо активний клас до натиснутої кнопки
+            this.classList.add('active')
+
+            // Оновлюємо ціни
+            const id = this.id
+            const prices = id.split(' ')
+
+            if (prices.length >= 3) {
+              // Ціна для України
+              const uaData = prices[0].split('-')
+              if (uaData.length === 3 && uaPrice) {
+                uaPrice.innerHTML = uaData[2] + ' <span>ГРН</span>'
+              }
+
+              // Ціна для США
+              const usData = prices[1].split('-')
+              if (usData.length === 3 && usPrice) {
+                usPrice.innerHTML = usData[2] + ' <span>USD</span>'
+              }
+
+              // Ціна для ЄС
+              const euData = prices[2].split('-')
+              if (euData.length === 3 && euPrice) {
+                euPrice.innerHTML = euData[2] + ' <span>EUR</span>'
+              }
+            }
+
+            // Оновлюємо посилання
+            const link = this.getAttribute('data-link')
+            if (link && priceBlock.relatedJoinLink) {
+              priceBlock.relatedJoinLink.href = link
+              console.log('Оновлено посилання:', link, 'для елементу:', priceBlock.relatedJoinLink)
+            }
+          })
+        })
+      })
+    })
+
     document.addEventListener('DOMContentLoaded', function () {
       var links = document.querySelectorAll('.join_link')
 
