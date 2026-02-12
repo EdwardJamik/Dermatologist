@@ -318,7 +318,7 @@ main {
 }
 
 .about_me {
-  padding: 0 0 0;
+  padding: 64px 0 0;
 }
 .about_me .container > h4 {
   font-family: Cormorant Garamond;
@@ -480,9 +480,6 @@ main {
   text-align: center;
 }
 
-.history {
-  margin-top: 64px;
-}
 .history .container .text {
   position: relative;
   overflow: hidden;
@@ -560,7 +557,564 @@ main {
   text-decoration-thickness: 0%;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
-  border-bottom: 1px solid #1c1c1c;
+}
+
+.tariff-calculator {
+  padding: 64px 0 32px;
+  transition: height 0.8s ease-in-out;
+}
+.tariff-calculator .container {
+  margin: 0 15px;
+  background-color: #1c1c1c;
+  border-radius: 34px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+.tariff-calculator .container > h4 {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 32px 0 24px;
+  color: #fff;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 36px;
+  line-height: 112%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 32px 0 24px;
+  color: #fff;
+}
+.tariff-calculator .container .steps-wrapper {
+  position: relative;
+}
+.tariff-calculator .container .calculator-step {
+  display: none;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tariff-calculator .container .calculator-step.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  z-index: 2;
+}
+.tariff-calculator .container .calculator-step.slide-out-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: slideOutLeft 0.5s forwards;
+}
+.tariff-calculator .container .calculator-step.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+.tariff-calculator .container .calculator-step.slide-out-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: slideOutRight 0.5s forwards;
+}
+.tariff-calculator .container .calculator-step.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+.tariff-calculator .container .buttons-container {
+  gap: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (max-width: 400px) {
+  .tariff-calculator .container .buttons-container {
+    flex-direction: column-reverse;
+  }
+}
+.tariff-calculator .container .back_button {
+  position: relative;
+  width: 100%;
+  margin: 16px auto 0;
+  color: #1c1c1c;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+  background-color: transparent;
+  width: -moz-min-content;
+  width: min-content;
+}
+.tariff-calculator .container .back_button::before {
+  content: " ";
+  position: absolute;
+  bottom: 50%;
+  left: -16px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  background-image: url(../images/arrowIconsvg.svg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  transform: rotate(270deg) translate(-50%, 0%);
+}
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.tariff-calculator .container .step-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.tariff-calculator .container .step-header .step-number {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #84817e;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tariff-calculator .container .step-header h5 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: "SemiBold";
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  letter-spacing: -2%;
+  margin: 0 0 0;
+}
+.tariff-calculator .container .step-header .step-subtitle {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  color: #84817e;
+  margin: 0;
+}
+.tariff-calculator .container .calculator-radio-group {
+  margin-bottom: 20px;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  padding: 8px 16px 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  height: 84px;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio:last-child {
+  margin-bottom: 0;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio.custom {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  padding: 8px 16px 8px;
+  margin-bottom: 8px;
+  height: 72px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+  display: flex;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio.custom .radio-custom {
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio.custom .radio-title {
+  line-height: normal;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio input[type=radio]:checked ~ .radio-custom::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d42222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio .radio-custom {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d42222;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio .radio-content .radio-title {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  color: #0d0401;
+  transition: color 0.3s ease;
+  padding-left: 22px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio .radio-content .radio-title .icon {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.tariff-calculator .container .calculator-radio-group .calculator-radio .radio-content .radio-description {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 12px;
+  line-height: 132%;
+  letter-spacing: 0%;
+  color: rgba(13, 4, 1, 0.5019607843);
+}
+.tariff-calculator .container .calculator-radio-group .calculator-button {
+  margin: 0 auto;
+  width: 100%;
+}
+.tariff-calculator .container .calculator-result {
+  display: none;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.tariff-calculator .container .calculator-result.popup {
+  padding-top: 20px;
+}
+.tariff-calculator .container .calculator-result.popup .close-btn {
+  margin: 0 0 20px auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tariff-calculator .container .calculator-result.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+  z-index: 2;
+}
+.tariff-calculator .container .calculator-result.slide-out-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: slideOutLeft 0.5s forwards;
+}
+.tariff-calculator .container .calculator-result.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+.tariff-calculator .container .calculator-result.slide-out-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: slideOutRight 0.5s forwards;
+}
+.tariff-calculator .container .calculator-result.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+.tariff-calculator .container .calculator-result .result-content {
+  text-align: center;
+}
+.tariff-calculator .container .calculator-result .result-content.result-2 > p {
+  max-width: 275px;
+}
+.tariff-calculator .container .calculator-result .result-content > h4 {
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(326.78deg, #c52226 -11.54%, #fb6262 97.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.tariff-calculator .container .calculator-result .result-content > p {
+  max-width: 220px;
+  margin: 0 auto 20px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 132%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+}
+.tariff-calculator .container .calculator-result .result-content > p b {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: "SemiBold";
+  font-size: 12px;
+  line-height: 132%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+}
+.tariff-calculator .container .calculator-result .result-content .price {
+  margin-bottom: 20px;
+}
+.tariff-calculator .container .calculator-result .result-content .price h4 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 192px;
+  padding: 0 10px;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: 1px dashed #c52226;
+  height: 96px;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.ua {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.ua .title {
+  display: flex;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.ua .title .icon {
+  background-image: url("../images/uaFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 0;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other::before {
+  content: "";
+  position: absolute;
+  height: 32px;
+  width: 0.5px;
+  border-left: 1px dashed #c52226;
+  /* увеличьте толщину до 1px */
+  left: 50%;
+  /* используйте left вместо right */
+  transform: translateX(-50%);
+  /* только по X оси */
+  z-index: 1;
+  /* добавьте z-index для уверенности */
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .us {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .us .title {
+  display: flex;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .us .title .icon {
+  background-image: url("../images/usFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .eu {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .eu .title {
+  display: flex;
+  align-items: center;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li.other .eu .title .icon {
+  background-image: url("../images/euFlag.png");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li .title {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li .price {
+  font-family: Cormorant Garamond;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  font-variant-numeric: lining-nums;
+}
+.tariff-calculator .container .calculator-result .result-content .price ul li .price > span {
+  font-family: Cormorant Garamond;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+}
+.tariff-calculator .container .calculator-result .result-content .red_button {
+  margin-bottom: 16px;
+}
+.tariff-calculator .container .calculator-result .result-content .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: "SemiBold";
+  font-size: 12px;
+  letter-spacing: 8%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c52226;
+}
+.tariff-calculator .container .calculator-result .result-content .details svg {
+  margin-left: 8px;
+  width: 12px;
+  height: 12px;
+}
+.tariff-calculator .container .calculator-result .result-content .back_test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: "SemiBold";
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 8%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-top: 18px;
+}
+.tariff-calculator .container .calculator-result .result-content .back_test svg {
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
 }
 
 .tarifs {
@@ -568,7 +1122,7 @@ main {
 }
 .tarifs .container .content {
   border-radius: 34px;
-  background: #0e0e0e;
+  background: #1c1c1c;
   padding: 48px 10px 10px;
 }
 .tarifs .container .content > h4 {
@@ -734,10 +1288,14 @@ main {
   position: absolute;
   height: 32px;
   width: 0.5px;
-  border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
-  left: 50%; /* используйте left вместо right */
-  transform: translateX(-50%); /* только по X оси */
-  z-index: 1; /* добавьте z-index для уверенности */
+  border-left: 1px dashed #c52226;
+  /* увеличьте толщину до 1px */
+  left: 50%;
+  /* используйте left вместо right */
+  transform: translateX(-50%);
+  /* только по X оси */
+  z-index: 1;
+  /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .price ul li.other .us, .tarifs .container .content .tarifsContent .second .price ul li.other .us, .tarifs .container .content .tarifsContent .third .price ul li.other .us {
   gap: 10px;
@@ -903,8 +1461,8 @@ main {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0%;
-  color: #0e0e0e;
-  border: 1px solid #0e0e0e;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
   border-radius: 100px;
   max-width: 160px;
   margin: 0 auto;
@@ -960,10 +1518,14 @@ main {
   position: absolute;
   height: 32px;
   width: 0.5px;
-  border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
-  left: 50%; /* используйте left вместо right */
-  transform: translateX(-50%); /* только по X оси */
-  z-index: 1; /* добавьте z-index для уверенности */
+  border-left: 1px dashed #c52226;
+  /* увеличьте толщину до 1px */
+  left: 50%;
+  /* используйте left вместо right */
+  transform: translateX(-50%);
+  /* только по X оси */
+  z-index: 1;
+  /* добавьте z-index для уверенности */
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul li.other .us, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul li.other .us {
   display: flex;
@@ -1196,7 +1758,6 @@ main {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.8s ease;
   padding: 0;
   margin-bottom: 1px;
@@ -1472,7 +2033,6 @@ main {
 
 .red_button {
   background-image: url(../images/buttonBg.svg);
-  background-size: contain;
   background-repeat: no-repeat;
   min-height: 72px;
   height: 100%;
@@ -1520,7 +2080,6 @@ main {
 
 .stagger-children > * {
   opacity: 0;
-  transform: translateY(20px);
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .stagger-children > *.visible {
@@ -1612,4 +2171,227 @@ main {
   100% {
     opacity: 1;
   }
+}
+/* New Popup Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.popup-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+.popup-overlay .calculator-result {
+  display: block !important;
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px 20px;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  opacity: 1 !important;
+}
+.popup-overlay.active .popup-overlay .calculator-result {
+  transform: scale(1);
+}
+.popup-overlay .calculator-result .close-btn {
+  margin: 0 0 20px auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.popup-overlay .calculator-result .result-content {
+  text-align: center;
+}
+.popup-overlay .calculator-result .result-content.result-2 > p {
+  max-width: 275px;
+}
+.popup-overlay .calculator-result .result-content > h4 {
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(326.78deg, #c52226 -11.54%, #fb6262 97.01%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.popup-overlay .calculator-result .result-content > p {
+  max-width: 220px;
+  margin: 0 auto 20px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 132%;
+  color: #000;
+}
+.popup-overlay .calculator-result .result-content > p b {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 132%;
+}
+.popup-overlay .calculator-result .result-content .price {
+  margin-bottom: 20px;
+}
+.popup-overlay .calculator-result .result-content .price h4 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+.popup-overlay .calculator-result .result-content .price ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.popup-overlay .calculator-result .result-content .price ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: 1px dashed #c52226;
+  min-height: 96px;
+  width: 100%;
+}
+.popup-overlay .calculator-result .result-content .price ul li.ua {
+  gap: 8px;
+}
+.popup-overlay .calculator-result .result-content .price ul li.ua .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Montserrat;
+  font-size: 16px;
+}
+.popup-overlay .calculator-result .result-content .price ul li.ua .title .icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/uaFlag.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.popup-overlay .calculator-result .result-content .price ul li.ua .price {
+  font-family: Cormorant Garamond;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+}
+.popup-overlay .calculator-result .result-content .price ul li.ua .price span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other {
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  border-top: none;
+  border: 1px dashed #c52226;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  border-left: 1px dashed #c52226;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us,
+.popup-overlay .calculator-result .result-content .price ul li.other .eu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us .title,
+.popup-overlay .calculator-result .result-content .price ul li.other .eu .title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-family: Montserrat;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us .title .icon,
+.popup-overlay .calculator-result .result-content .price ul li.other .eu .title .icon {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us .price,
+.popup-overlay .calculator-result .result-content .price ul li.other .eu .price {
+  font-family: Cormorant Garamond;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us .price span,
+.popup-overlay .calculator-result .result-content .price ul li.other .eu .price span {
+  font-size: 16px;
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .us .icon {
+  background-image: url("../images/usFlag.png");
+}
+.popup-overlay .calculator-result .result-content .price ul li.other .eu .icon {
+  background-image: url("../images/euFlag.png");
+}
+.popup-overlay .calculator-result .result-content .details,
+.popup-overlay .calculator-result .result-content .back_test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #c52226;
+  cursor: pointer;
+}
+.popup-overlay .calculator-result .result-content .details svg,
+.popup-overlay .calculator-result .result-content .back_test svg {
+  margin: 0 5px;
+}
+.popup-overlay .calculator-result .result-content .back_test {
+  color: #1c1c1c;
+  margin-top: 18px;
+}
+.popup-overlay .calculator-result .result-content .back_test svg {
+  margin-right: 8px;
 }/*# sourceMappingURL=style.css.map */

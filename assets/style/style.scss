@@ -13,8 +13,10 @@ main {
 
 .top_content {
   padding: 44px 0 0;
+
   & .container {
     position: relative;
+
     & h1 {
       font-weight: 600;
       font-style: italic;
@@ -56,6 +58,7 @@ main {
       max-width: 360px;
       width: 100%;
       margin: 0 auto;
+
       & .bg_word {
         display: flex;
         align-items: center;
@@ -71,6 +74,7 @@ main {
         left: 50%;
         transform: translate(-50%, 0%);
         top: -40px;
+
         & > span {
           display: block;
           font-family: Cormorant Garamond;
@@ -93,6 +97,7 @@ main {
         position: absolute;
         top: 44%;
         z-index: 3;
+
         & li {
           position: relative;
           display: flex;
@@ -156,7 +161,8 @@ main {
 }
 
 .about_me {
-  padding: 0 0 0;
+  padding: 64px 0 0;
+
   & .container {
     & > h4 {
       font-family: Cormorant Garamond;
@@ -201,9 +207,11 @@ main {
           justify-content: space-between;
           height: 100%;
           gap: 10px;
+
           & li {
             display: flex;
             flex-direction: column;
+
             & span {
               color: #c52226;
               font-family: Cormorant Garamond;
@@ -227,8 +235,8 @@ main {
               line-height: 155%;
               letter-spacing: 0%;
               text-align: center;
-              background: linear-gradient(0deg, #1c1c1c, #1c1c1c),
-                linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              background:
+                linear-gradient(0deg, #1c1c1c, #1c1c1c), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
               -webkit-background-clip: text;
@@ -340,7 +348,8 @@ main {
 }
 
 .history {
-  margin-top: 64px;
+  // margin-top: 64px;
+
   & .container {
     .text {
       position: relative;
@@ -427,7 +436,648 @@ main {
         text-decoration-offset: 25%;
         text-decoration-thickness: 0%;
         text-decoration-skip-ink: auto;
-        border-bottom: 1px solid #1c1c1c;
+      }
+    }
+  }
+}
+
+.tariff-calculator {
+  padding: 64px 0 32px;
+  transition: height 0.8s ease-in-out;
+
+  & .container {
+    margin: 0 15px;
+    background-color: #1c1c1c;
+    border-radius: 34px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+
+    & > h4 {
+      font-family: Cormorant Garamond;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 112%;
+      letter-spacing: -2%;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      margin: 32px 0 24px;
+      color: #fff;
+      font-family: Cormorant Garamond;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 36px;
+      line-height: 112.00000000000001%;
+      letter-spacing: -2%;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      margin: 32px 0 24px;
+      color: #fff;
+    }
+
+    & .steps-wrapper {
+      position: relative;
+    }
+
+    & .calculator-step {
+      display: none;
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px 20px;
+      opacity: 0;
+      // transform: translateY(20px);
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+      &.active {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        position: relative;
+        z-index: 2;
+      }
+
+      &.slide-out-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        animation: slideOutLeft 0.5s forwards;
+      }
+
+      &.slide-in-right {
+        animation: slideInRight 0.5s forwards;
+      }
+
+      &.slide-out-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        animation: slideOutRight 0.5s forwards;
+      }
+
+      &.slide-in-left {
+        animation: slideInLeft 0.5s forwards;
+      }
+    }
+
+    & .buttons-container {
+      gap: 10px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @media (max-width: 400px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    & .back_button {
+      position: relative;
+      width: 100%;
+      margin: 16px auto 0;
+      color: #1c1c1c;
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      text-align: center;
+      background-color: transparent;
+      width: min-content;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        bottom: 50%;
+        left: -16px;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        background-image: url(../images/arrowIconsvg.svg);
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        transform: rotate(270deg) translate(-50%, 0%);
+      }
+    }
+
+    @keyframes slideOutLeft {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideOutRight {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    & .step-header {
+      text-align: left;
+      margin-bottom: 20px;
+
+      & .step-number {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: #84817e;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+
+      & h5 {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-style: "SemiBold";
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        letter-spacing: -2%;
+        margin: 0 0 0;
+      }
+
+      & .step-subtitle {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+        letter-spacing: 0%;
+        color: #84817e;
+        margin: 0;
+      }
+    }
+
+    & .calculator-radio-group {
+      margin-bottom: 20px;
+
+      & .calculator-radio {
+        position: relative;
+        display: block;
+        border-radius: 16px;
+        padding: 8px 16px 16px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition:
+          background 0.3s ease,
+          box-shadow 0.3s ease;
+        border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+        height: 84px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.custom {
+          position: relative;
+          display: block;
+          border-radius: 16px;
+          padding: 8px 16px 8px;
+          margin-bottom: 8px;
+          height: 72px;
+          cursor: pointer;
+          transition:
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+          border: 0.5px dashed rgba(28, 28, 28, 0.1490196078);
+          display: flex;
+          align-items: center;
+
+          & .radio-custom {
+            top: 50%;
+            transform: translate(0%, -50%);
+          }
+
+          & .radio-title {
+            line-height: normal;
+          }
+        }
+
+        & input[type="radio"] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+
+          &:checked ~ .radio-custom {
+            &::after {
+              content: "";
+              position: absolute;
+              width: 9px;
+              height: 9px;
+              border-radius: 50%;
+              background: #d42222;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        & .radio-custom {
+          position: absolute;
+          left: 16px;
+          top: 20px;
+          width: 14px;
+          height: 14px;
+          border: 1px solid #d42222;
+          border-radius: 50%;
+          background: #fff;
+          transition: all 0.3s ease;
+        }
+
+        & .radio-content {
+          & .radio-title {
+            font-family: "Montserrat";
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 155%;
+            letter-spacing: 0%;
+            color: #0d0401;
+            transition: color 0.3s ease;
+            padding-left: 22px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+
+            & .icon {
+              display: flex;
+              align-items: center;
+              margin-left: auto;
+            }
+          }
+
+          & .radio-description {
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-style: "Regular";
+            font-size: 12px;
+            line-height: 132%;
+            letter-spacing: 0%;
+            color: #0d040180;
+          }
+        }
+      }
+
+      & .calculator-button {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    & .calculator-result {
+      display: none;
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+      &.popup {
+        padding-top: 20px;
+
+        & .close-btn {
+          margin: 0 0 20px auto;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &.active {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        position: relative;
+        z-index: 2;
+      }
+
+      &.slide-out-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        animation: slideOutLeft 0.5s forwards;
+      }
+
+      &.slide-in-right {
+        animation: slideInRight 0.5s forwards;
+      }
+
+      &.slide-out-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        animation: slideOutRight 0.5s forwards;
+      }
+
+      &.slide-in-left {
+        animation: slideInLeft 0.5s forwards;
+      }
+
+      & .result-content {
+        text-align: center;
+
+        &.result-2 {
+          & > p {
+            max-width: 275px;
+          }
+        }
+
+        & > h4 {
+          font-family: "Cormorant Garamond";
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 24px;
+          line-height: 125%;
+          letter-spacing: -2%;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(326.78deg, #c52226 -11.54%, #fb6262 97.01%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 4px;
+        }
+
+        & > p {
+          max-width: 220px;
+          margin: 0 auto 20px;
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 12px;
+          line-height: 132%;
+          letter-spacing: 0%;
+          text-align: center;
+          vertical-align: bottom;
+
+          & b {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-style: "SemiBold";
+            font-size: 12px;
+            line-height: 132%;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: bottom;
+          }
+        }
+
+        & .price {
+          margin-bottom: 20px;
+
+          & h4 {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 155%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #1c1c1c;
+            margin-bottom: 16px;
+            opacity: 0.6;
+          }
+
+          & ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 192px;
+            padding: 0 10px;
+
+            & li {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 16px 0;
+              border-radius: 12px;
+              border: 1px dashed #c52226;
+              height: 96px;
+
+              &.ua {
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & .title {
+                  display: flex;
+                  align-items: center;
+
+                  & .icon {
+                    background-image: url("../images/uaFlag.png");
+                    background-size: contain;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+
+              &.other {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 16px 0;
+                border-top: 0;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  height: 32px;
+                  width: 0.5px;
+                  border-left: 1px dashed #c52226;
+                  /* увеличьте толщину до 1px */
+                  left: 50%;
+                  /* используйте left вместо right */
+                  transform: translateX(-50%);
+                  /* только по X оси */
+                  z-index: 1;
+                  /* добавьте z-index для уверенности */
+                }
+
+                & .us {
+                  gap: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 auto;
+
+                  & .title {
+                    display: flex;
+                    align-items: center;
+
+                    & .icon {
+                      background-image: url("../images/usFlag.png");
+                      background-size: contain;
+                      width: 16px;
+                      height: 16px;
+                      margin-right: 8px;
+                    }
+                  }
+                }
+
+                & .eu {
+                  gap: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 auto;
+
+                  & .title {
+                    display: flex;
+                    align-items: center;
+
+                    & .icon {
+                      background-image: url("../images/euFlag.png");
+                      background-size: contain;
+                      width: 16px;
+                      height: 16px;
+                      margin-right: 8px;
+                    }
+                  }
+                }
+              }
+
+              & .title {
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
+
+              & .price {
+                font-family: Cormorant Garamond;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 100%;
+                letter-spacing: -2%;
+                text-transform: uppercase;
+                font-variant-numeric: lining-nums;
+
+                & > span {
+                  font-family: Cormorant Garamond;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 100%;
+                  letter-spacing: -2%;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+
+        & .red_button {
+          margin-bottom: 16px;
+        }
+
+        & .details {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-style: "SemiBold";
+          font-size: 12px;
+          letter-spacing: 8%;
+          text-align: center;
+          text-transform: uppercase;
+          color: #c52226;
+
+          & svg {
+            margin-left: 8px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        & .back_test {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-style: "SemiBold";
+          font-size: 12px;
+          line-height: 140%;
+          letter-spacing: 8%;
+          text-align: center;
+          text-transform: uppercase;
+          color: #1c1c1c;
+          margin-top: 18px;
+
+          & svg {
+            margin-right: 8px;
+            width: 12px;
+            height: 12px;
+          }
+        }
       }
     }
   }
@@ -435,10 +1085,11 @@ main {
 
 .tarifs {
   margin-top: 16px;
+
   & .container {
     & .content {
       border-radius: 34px;
-      background: #0e0e0e;
+      background: #1c1c1c;
       padding: 48px 10px 10px;
 
       & > h4 {
@@ -599,9 +1250,11 @@ main {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
+
                   & .title {
                     display: flex;
                     align-items: center;
+
                     & .icon {
                       background-image: url("../images/uaFlag.png");
                       background-size: contain;
@@ -625,10 +1278,14 @@ main {
                     position: absolute;
                     height: 32px;
                     width: 0.5px;
-                    border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
-                    left: 50%; /* используйте left вместо right */
-                    transform: translateX(-50%); /* только по X оси */
-                    z-index: 1; /* добавьте z-index для уверенности */
+                    border-left: 1px dashed #c52226;
+                    /* увеличьте толщину до 1px */
+                    left: 50%;
+                    /* используйте left вместо right */
+                    transform: translateX(-50%);
+                    /* только по X оси */
+                    z-index: 1;
+                    /* добавьте z-index для уверенности */
                   }
 
                   & .us {
@@ -638,9 +1295,11 @@ main {
                     justify-content: center;
                     align-items: center;
                     margin: 0 auto;
+
                     & .title {
                       display: flex;
                       align-items: center;
+
                       & .icon {
                         background-image: url("../images/usFlag.png");
                         background-size: contain;
@@ -658,9 +1317,11 @@ main {
                     justify-content: center;
                     align-items: center;
                     margin: 0 auto;
+
                     & .title {
                       display: flex;
                       align-items: center;
+
                       & .icon {
                         background-image: url("../images/euFlag.png");
                         background-size: contain;
@@ -705,6 +1366,7 @@ main {
 
           & .services {
             margin: 0 20px;
+
             & ul {
               & li {
                 position: relative;
@@ -748,6 +1410,7 @@ main {
 
           & .consultation {
             margin: 0 20px;
+
             & > h4 {
               font-family: Cormorant Garamond;
               font-weight: 400;
@@ -757,6 +1420,7 @@ main {
               text-align: center;
               text-transform: uppercase;
               margin-bottom: 8px;
+
               &.dermantolog {
                 font-family: Cormorant Garamond;
                 font-weight: 400;
@@ -815,8 +1479,8 @@ main {
                   font-size: 12px;
                   line-height: 140%;
                   letter-spacing: 0%;
-                  color: #0e0e0e;
-                  border: 1px solid #0e0e0e;
+                  color: #1c1c1c;
+                  border: 1px solid #1c1c1c;
                   border-radius: 100px;
                   max-width: 160px;
                   margin: 0 auto;
@@ -850,9 +1514,11 @@ main {
                   &.ua {
                     display: flex;
                     gap: 10px;
+
                     & .title {
                       display: flex;
                       align-items: center;
+
                       & .icon {
                         background-image: url("../images/uaFlag.png");
                         background-size: contain;
@@ -876,10 +1542,14 @@ main {
                       position: absolute;
                       height: 32px;
                       width: 0.5px;
-                      border-left: 1px dashed #c52226; /* увеличьте толщину до 1px */
-                      left: 50%; /* используйте left вместо right */
-                      transform: translateX(-50%); /* только по X оси */
-                      z-index: 1; /* добавьте z-index для уверенности */
+                      border-left: 1px dashed #c52226;
+                      /* увеличьте толщину до 1px */
+                      left: 50%;
+                      /* используйте left вместо right */
+                      transform: translateX(-50%);
+                      /* только по X оси */
+                      z-index: 1;
+                      /* добавьте z-index для уверенности */
                     }
 
                     & .us {
@@ -889,9 +1559,11 @@ main {
                       align-items: center;
                       justify-content: center;
                       margin: 0 auto;
+
                       & .title {
                         display: flex;
                         align-items: center;
+
                         & .icon {
                           background-image: url("../images/usFlag.png");
                           background-size: contain;
@@ -909,9 +1581,11 @@ main {
                       align-items: center;
                       justify-content: center;
                       margin: 0 auto;
+
                       & .title {
                         display: flex;
                         align-items: center;
+
                         & .icon {
                           background-image: url("../images/euFlag.png");
                           background-size: contain;
@@ -954,6 +1628,7 @@ main {
               }
             }
           }
+
           & .red_button {
             margin: 0 auto;
             width: auto;
@@ -974,14 +1649,17 @@ main {
           & .services {
             & ul {
               margin-top: 24px;
+
               & li {
                 margin-bottom: 24px;
 
                 & > ul {
                   margin-top: 12px;
+
                   & li {
                     padding: 0;
                     list-style: outside;
+
                     &::before {
                       display: none;
                     }
@@ -998,6 +1676,7 @@ main {
 
 .reviews {
   margin-top: 64px;
+
   & .number {
     width: 40px;
     height: 40px;
@@ -1079,6 +1758,7 @@ main {
         & .messageSlider {
           padding-left: 15px;
           margin-bottom: 24px;
+
           & img {
             margin-right: 8px;
           }
@@ -1086,6 +1766,7 @@ main {
 
         & .photoSlider {
           padding-left: 15px;
+
           & img {
             margin-right: 8px;
           }
@@ -1159,7 +1840,7 @@ main {
           max-height: 0;
           opacity: 0;
           overflow: hidden;
-          transform: translateY(20px);
+          // transform: translateY(20px);
           transition:
             opacity 0.6s ease,
             transform 0.6s ease,
@@ -1195,6 +1876,7 @@ main {
           letter-spacing: 0%;
           text-align: center;
           color: #84817e;
+
           & b {
             font-family: Montserrat;
             font-weight: 500;
@@ -1225,6 +1907,7 @@ main {
       width: 100%;
       display: block;
       max-width: 110px;
+
       &.hidden {
         opacity: 0;
         visibility: hidden;
@@ -1254,6 +1937,7 @@ main {
 
 .asked {
   margin-top: 64px;
+
   & .container {
     & > h4 {
       font-family: Cormorant Garamond;
@@ -1273,9 +1957,11 @@ main {
         border: 0.5px solid #1c1c1c26;
         border-radius: 16px;
         margin-bottom: 24px;
+
         & .title {
           display: flex;
           align-items: self-start;
+
           & > span {
             font-family: Montserrat;
             font-weight: 600;
@@ -1349,6 +2035,7 @@ main {
           & ul {
             &.dotted {
               padding: 0 24px;
+
               & > li {
                 padding: 0;
                 list-style: outside;
@@ -1358,6 +2045,7 @@ main {
             &.last {
               margin-top: 12px;
             }
+
             & > li {
               position: relative;
               padding-left: 16px;
@@ -1414,6 +2102,7 @@ main {
   position: relative;
   padding-bottom: 60px;
   max-height: 550px;
+
   & h4 {
     font-family: Cormorant Garamond;
     font-weight: 400;
@@ -1478,7 +2167,7 @@ main {
 
 .red_button {
   background-image: url(../images/buttonBg.svg);
-  background-size: contain;
+  // background-size: contain;
   background-repeat: no-repeat;
   min-height: 72px;
   height: 100%;
@@ -1534,7 +2223,7 @@ main {
 .stagger-children {
   > * {
     opacity: 0;
-    transform: translateY(20px);
+    // transform: translateY(20px);
     transition:
       transform 0.5s ease,
       opacity 0.5s ease;
@@ -1626,9 +2315,11 @@ main {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.03);
   }
+
   100% {
     transform: scale(1);
   }
@@ -1642,10 +2333,264 @@ main {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
+  }
+}
+
+/* New Popup Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  box-sizing: border-box;
+
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  & .calculator-result {
+    display: block !important;
+    position: relative;
+    background: #fff;
+    border-radius: 24px;
+    padding: 32px 20px;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    opacity: 1 !important;
+
+    .popup-overlay.active & {
+      transform: scale(1);
+    }
+
+    & .close-btn {
+      margin: 0 0 20px auto;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    & .result-content {
+      text-align: center;
+
+      &.result-2 {
+        & > p {
+          max-width: 275px;
+        }
+      }
+
+      & > h4 {
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 125%;
+        letter-spacing: -2%;
+        text-align: center;
+        text-transform: uppercase;
+        background: linear-gradient(326.78deg, #c52226 -11.54%, #fb6262 97.01%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 4px;
+      }
+
+      & > p {
+        max-width: 220px;
+        margin: 0 auto 20px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 132%;
+        color: #000;
+
+        & b {
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 132%;
+        }
+      }
+
+      & .price {
+        margin-bottom: 20px;
+
+        & h4 {
+          font-family: Montserrat;
+          font-weight: 400;
+          font-size: 14px;
+          text-align: center;
+          color: #1c1c1c;
+          margin-bottom: 16px;
+          opacity: 0.6;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 0;
+          margin: 0;
+
+          & li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 0;
+            border-radius: 12px;
+            border: 1px dashed #c52226;
+            min-height: 96px;
+            width: 100%;
+
+            &.ua {
+              gap: 8px;
+
+              & .title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-family: Montserrat;
+                font-size: 16px;
+
+                & .icon {
+                  width: 16px;
+                  height: 16px;
+                  background-image: url("../images/uaFlag.png");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                }
+              }
+
+              & .price {
+                font-family: Cormorant Garamond;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 1;
+
+                span {
+                  font-size: 16px;
+                  font-weight: 400;
+                }
+              }
+            }
+
+            &.other {
+              flex-direction: row;
+              justify-content: space-around;
+              position: relative;
+              border-top: none;
+              border: 1px dashed #c52226;
+
+              &::before {
+                content: "";
+                position: absolute;
+                height: 60%;
+                width: 1px;
+                border-left: 1px dashed #c52226;
+                left: 50%;
+                top: 20%;
+                transform: translateX(-50%);
+              }
+
+              .us,
+              .eu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                .title {
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  font-size: 16px;
+                  font-family: Montserrat;
+
+                  .icon {
+                    width: 16px;
+                    height: 16px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+                }
+
+                .price {
+                  font-family: Cormorant Garamond;
+                  font-size: 36px;
+                  font-weight: 500;
+                  line-height: 1;
+
+                  span {
+                    font-size: 16px;
+                  }
+                }
+              }
+
+              .us .icon {
+                background-image: url("../images/usFlag.png");
+              }
+
+              .eu .icon {
+                background-image: url("../images/euFlag.png");
+              }
+            }
+          }
+        }
+      }
+
+      .details,
+      .back_test {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        color: #c52226;
+        cursor: pointer;
+
+        svg {
+          margin: 0 5px;
+        }
+      }
+
+      .back_test {
+        color: #1c1c1c;
+        margin-top: 18px;
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
   }
 }

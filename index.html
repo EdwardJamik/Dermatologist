@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/style/style.css?v=1.2">
+  <link rel="stylesheet" href="/assets/style/style.css?v=2.0">
   <title>Вероніка Кравчук</title>
 
-  <meta property="og:title" content="Вероніка Кравчук - експертка з комплексного лікування шкіри">
+  <meta property="og:title" content="Вероніка Кравчук | Лікар-дерматолог, трихолог — dr.Myts">
   <meta property="og:description"
-    content="Лікування дерматологічних захворювань, трихологія, дитяча дерматологія та сучасна косметологія — комплексний підхід до здоров’я та краси вашої шкіри.">
+    content="Експертне лікування шкіри та волосся. Доказовий підхід, корекція дефіцитів та індивідуальні схеми догляду. Запис на консультацію онлайн.">
 
-  <meta name="twitter:title" content="Вероніка Кравчук - експертка з комплексного лікування шкіри">
+  <meta name="twitter:title" content="Вероніка Кравчук | Лікар-дерматолог, трихолог — dr.Myts">
   <meta name="twitter:description"
-    content="Лікування дерматологічних захворювань, трихологія, дитяча дерматологія та сучасна косметологія — комплексний підхід до здоров’я та краси вашої шкіри.">
+    content="Експертне лікування шкіри та волосся. Доказовий підхід, корекція дефіцитів та індивідуальні схеми догляду. Запис на консультацію онлайн.">
 
   <script src="./assets/scripts/jquery.min.js"></script>
   <script src="./assets/scripts/slick/slick.min.js"></script>
@@ -57,48 +57,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="about_me">
-        <div class="container">
-          <h4 class="fade-in">Про мене</h4>
-          <img src="./assets/images/about_me_img.png" alt="About me" class="scale-in" />
-          <div class="about_list stagger-children">
-            <div class="first">
-              <ul class="list-appear">
-                <li>
-                  <span><b>4</b>+</span>
-                  <p>років досвід роботи</p>
-                </li>
-                <li>
-                  <span><b>2500</b>+</span>
-                  <p>пацієнтів онлайн та офлайн</p>
-                </li>
-                <li>
-                  <span><b>100</b>+</span>
-                  <p>навчань в Україні та закордоном</p>
-                </li>
-              </ul>
-            </div>
-            <div class="second">
-              <div class="icon"></div>
-              <h4>Доказова медицина</h4>
-              <p>
-                Використовую методи,<br />підтверджені дослідженнями<br />Американських та
-                Європейських<br />асоціацій
-              </p>
-            </div>
-            <div class="third">
-              <div class="icon"></div>
-              <h4>Комплексний підхід</h4>
-              <p>
-                Корекція харчування, сну, стресу,<br /> дефіцитів та способу життя
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="history">
       <div class="history">
         <div class="container">
@@ -136,6 +94,7 @@
     </section>
 
     <section id="tarifs">
+
       <div class="tarifs">
         <div class="container">
           <div class="content">
@@ -149,7 +108,7 @@
               </div>
             </div>
             <div class="tarifsContent">
-              <div class="first active">
+              <div class="first active" id="result-1">
                 <h4>Лікування Акне:</h4>
                 <p>Комплексне лікування акне<br />
                   <b>підтримка: 3 місяці</b>
@@ -258,7 +217,7 @@
 
               </div>
 
-              <div class="third">
+              <div class="third" id="result-3">
                 <h4>Консультація <br />трихолога:</h4>
                 <p>Комплексне лікування алопеції <br /> <b>підтримка: 3 місяці</b>
                 </p>
@@ -320,7 +279,7 @@
                     консультацію</a>
                 </div>
                 <hr>
-                <div class="consultation">
+                <div class="consultation" id="result-2">
                   <h4>Контрольна консультація:</h4>
                   <p> <b>Повторна консультація</b> після завершення терміну лікування для перевірки стану та корекції
                     лікування</p>
@@ -366,7 +325,7 @@
 
               </div>
 
-              <div class="second">
+              <div class="second" id="result-4">
                 <h4>Одноразова <br />консультація:</h4>
                 <div class="number">01</div>
                 <p>Консультація по догляду <br /> за шкірою
@@ -446,7 +405,7 @@
 
                 <hr>
 
-                <div class="consultation">
+                <div class="consultation" id="result-5">
                   <div class="number">02</div>
                   <h4 class="dermantolog">Дерматологічна консультація</h4>
                   <p>Алергічні, бактеріальні, вірусні захворювання, які <b>не потребують підтримки лікування</b> </p>
@@ -512,6 +471,212 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="tariff-calculator">
+      <div class="tariff-calculator">
+        <div class="container">
+          <h4 class="fade-in">Оберіть<br />свій тариф:</h4>
+
+          <div class="steps-wrapper">
+            <!-- Step 1 -->
+            <div class="calculator-step step-1 active">
+              <div class="step-header">
+                <span class="step-number">
+                  <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                      fill="none">
+                      <path
+                        d="M3.33332 13.3334V11.3501C3.33332 9.58341 2.47499 8.75008 2.49999 6.66675C2.52499 4.40008 3.74165 1.66675 6.24999 1.66675C7.80832 1.66675 8.33332 3.16675 8.33332 4.58341C8.33332 7.17508 6.66665 9.30008 6.66665 11.8167V13.3334C6.66665 13.7754 6.49106 14.1994 6.1785 14.5119C5.86594 14.8245 5.44201 15.0001 4.99999 15.0001C4.55796 15.0001 4.13404 14.8245 3.82148 14.5119C3.50891 14.1994 3.33332 13.7754 3.33332 13.3334Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                      <path
+                        d="M16.6667 16.6667V14.6833C16.6667 12.9167 17.525 12.0833 17.5 10C17.475 7.73333 16.2583 5 13.75 5C12.1917 5 11.6667 6.5 11.6667 7.91667C11.6667 10.5083 13.3333 12.6333 13.3333 15.15V16.6667C13.3333 17.1087 13.5089 17.5326 13.8215 17.8452C14.134 18.1577 14.558 18.3333 15 18.3333C15.442 18.3333 15.8659 18.1577 16.1785 17.8452C16.4911 17.5326 16.6667 17.1087 16.6667 16.6667Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                    </svg></div> КРОК 1
+                </span>
+                <h5>Яка ваша ціль?</h5>
+              </div>
+              <div class="calculator-radio-group">
+                <label class="calculator-radio">
+                  <input type="radio" name="goal" value="treatment" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Лікування захворювання <div class="icon"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M22 6.5C22 8.98529 19.9853 11 17.5 11C15.0147 11 13 8.98529 13 6.5C13 4.01472 15.0147 2 17.5 2C19.9853 2 22 4.01472 22 6.5ZM19.9088 7.05389C19.8392 7.35669 19.5373 7.54569 19.2346 7.47605L15.5133 6.62054C15.2105 6.55096 15.0215 6.24907 15.0911 5.94633C15.1607 5.64359 15.4626 5.45454 15.7653 5.52417L19.4866 6.37968C19.7894 6.44926 19.9784 6.75116 19.9088 7.05389Z"
+                            fill="#DDDDDD" />
+                          <path
+                            d="M8.06274 3.7004C7.69852 2.83876 6.48048 2.75185 5.99122 3.55259L2.16471 9.81456C1.7233 10.5369 2.21683 11.4591 3.0777 11.5206L9.75255 11.9968C10.6134 12.0583 11.2397 11.216 10.9111 10.4387L8.06274 3.7004Z"
+                            fill="#DDDDDD" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.1822 19.0297C19.7574 18.2916 20.439 16.4098 19.7044 14.8268C18.9699 13.2438 17.0974 12.5589 15.5222 13.2971L9.81782 15.9702C8.24257 16.7085 7.56108 18.5901 8.2956 20.1732C9.03017 21.7562 10.9026 22.4411 12.4778 21.7029L18.1822 19.0297ZM15.3277 19.2042L17.7388 18.0743C18.789 17.5822 19.2433 16.3277 18.7537 15.2723C18.264 14.217 17.0157 13.7604 15.9655 14.2525L13.5544 15.3824L15.3277 19.2042Z"
+                            fill="#DDDDDD" />
+                        </svg></div>
+                    </div>
+                    <div class="radio-description">акне, випадіння волосся, висипи</div>
+                  </div>
+                </label>
+                <label class="calculator-radio">
+                  <input type="radio" name="goal" value="care" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Тільки догляд/процедури <div class="icon"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.05782 2.82666C6.49488 2.82666 6.03855 3.283 6.03855 3.84593V7.46435C4.87543 7.70047 4 8.72876 4 9.96157V18.6254C4 20.0327 5.14087 21.1736 6.54818 21.1736H12.6638C13.7087 21.1736 14.6068 20.5446 15 19.6447H13.8034C13.5235 19.9574 13.1166 20.1543 12.6638 20.1543H6.54818C5.70377 20.1543 5.01927 19.4698 5.01927 18.6254V18.1158H10.1156C10.3971 18.1158 10.6253 17.8876 10.6253 17.6061C10.6253 17.3247 10.3971 17.0965 10.1156 17.0965H5.01927V12.5098H9.09637C9.37784 12.5098 9.606 12.2816 9.606 12.0001C9.606 11.7186 9.37784 11.4905 9.09637 11.4905H5.01927V9.96157C5.01927 9.11716 5.70377 8.43266 6.54818 8.43266H12.6638C13.1166 8.43266 13.5235 8.62954 13.8034 8.9423H15C14.6725 8.19268 13.9946 7.63106 13.1735 7.46435V3.84593C13.1735 3.283 12.7171 2.82666 12.1542 2.82666H7.05782ZM12.1542 3.84593H7.05782V7.41339H12.1542V3.84593Z"
+                            fill="#DDDDDD" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.5998 16.8446C20.5091 15.7534 21.0031 14.3967 21 12.9992V11.1999C21 10.8816 20.8683 10.5765 20.6339 10.3514C20.3996 10.1264 20.0817 10 19.7503 10H12.2497C11.9183 10 11.6004 10.1264 11.3661 10.3514C11.1317 10.5765 11 10.8816 11 11.1999V12.9992C10.9968 14.3966 11.4907 15.7532 12.3999 16.8444C13.309 17.9357 14.579 18.6961 15.9996 19C17.4204 18.6963 18.6905 17.9359 19.5998 16.8446ZM16.7895 12.5C16.7895 12.2239 16.5538 12 16.2632 12C15.9725 12 15.7368 12.2239 15.7368 12.5V13.5H14.6842C14.3935 13.5 14.1579 13.7239 14.1579 14C14.1579 14.2761 14.3935 14.5 14.6842 14.5H15.7368V15.5C15.7368 15.7761 15.9725 16 16.2632 16C16.5538 16 16.7895 15.7761 16.7895 15.5V14.5H17.8421C18.1328 14.5 18.3684 14.2761 18.3684 14C18.3684 13.7239 18.1328 13.5 17.8421 13.5H16.7895V12.5Z"
+                            fill="#DDDDDD" />
+                        </svg></div>
+                    </div>
+                    <div class="radio-description">хочу підібрати косметику</div>
+                  </div>
+                </label>
+              </div>
+              <div class="buttons-container">
+                <button class="red_button calculator-button" onclick="nextStep(1)">ПЕРЕЙТИ ДАЛІ</button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="calculator-step step-2">
+              <div class="step-header">
+                <span class="step-number">
+                  <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                      fill="none">
+                      <path
+                        d="M3.33332 13.3334V11.3501C3.33332 9.58341 2.47499 8.75008 2.49999 6.66675C2.52499 4.40008 3.74165 1.66675 6.24999 1.66675C7.80832 1.66675 8.33332 3.16675 8.33332 4.58341C8.33332 7.17508 6.66665 9.30008 6.66665 11.8167V13.3334C6.66665 13.7754 6.49106 14.1994 6.1785 14.5119C5.86594 14.8245 5.44201 15.0001 4.99999 15.0001C4.55796 15.0001 4.13404 14.8245 3.82148 14.5119C3.50891 14.1994 3.33332 13.7754 3.33332 13.3334Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                      <path
+                        d="M16.6667 16.6667V14.6833C16.6667 12.9167 17.525 12.0833 17.5 10C17.475 7.73333 16.2583 5 13.75 5C12.1917 5 11.6667 6.5 11.6667 7.91667C11.6667 10.5083 13.3333 12.6333 13.3333 15.15V16.6667C13.3333 17.1087 13.5089 17.5326 13.8215 17.8452C14.134 18.1577 14.558 18.3333 15 18.3333C15.442 18.3333 15.8659 18.1577 16.1785 17.8452C16.4911 17.5326 16.6667 17.1087 16.6667 16.6667Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                    </svg></div> КРОК 2
+                </span>
+                <h5>Оберіть напрямок лікування</h5>
+              </div>
+              <div class="calculator-radio-group">
+                <label class="calculator-radio">
+                  <input type="radio" name="direction" value="acne" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Акне <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" viewBox="0 0 24 24" fill="none">
+                          <mask id="mask0_281_175" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="24" height="24">
+                            <path
+                              d="M24 11.9993C24 18.6272 18.6272 24 11.9997 24C5.37222 24 0 18.6272 0 11.9993C0 5.37221 5.37222 2.54042e-09 11.9997 2.54042e-09C18.6272 -0.000134896 24 5.37221 24 11.9993Z"
+                              fill="white" />
+                          </mask>
+                          <g mask="url(#mask0_281_175)">
+                            <path
+                              d="M12 -1.06055C1.60488 -1.06055 -1.64944 8.45139 -1.96459 12.7036C-2.19381 15.7983 -1.25525 21.5947 -0.727268 24.5216C-0.553831 25.4828 0.431273 26.1101 1.43594 25.8983C3.84661 25.3899 8.35465 24.5796 12 24.5796L12 -1.06055Z"
+                              fill="#DDDDDD" />
+                            <path
+                              d="M12 -3.00009C22.502 -3.00009 25.6461 7.15607 25.9642 11.7233C26.1958 15.0472 25.2476 21.273 24.7142 24.4166C24.539 25.449 23.5437 26.1229 22.5287 25.8953C20.0933 25.3492 15.6828 24.4922 12 24.4922V-3.00009Z"
+                              fill="#DDDDDD" />
+                            <path
+                              d="M4 14.3463C5.37464 18.4335 8.24594 21 11.3267 21C14.4074 21 18.1383 18.085 19.0874 14.3463C19.0874 14.3463 20.2982 15.1383 21.1494 14.2195C22.0002 13.3007 22.5894 9.84713 21.0184 9.81537C20.3639 9.81537 19.6112 12.2233 18.9564 12.2233C18.3019 12.2233 13.0982 9.40337 13.2946 5.06279C13.2946 5.06279 11.429 10.7342 7.14177 12.6986C7.14177 12.6986 10.4761 9.72105 10.9644 5C10.9644 5 9.7426 10.9657 4 14.3463Z"
+                              fill="white" />
+                          </g>
+                          <circle cx="15.5" cy="13.5" r="0.5" fill="#DDDDDD" />
+                          <circle cx="13" cy="14.25" r="1" fill="#DDDDDD" />
+                          <circle cx="15" cy="16.5" r="0.75" fill="#DDDDDD" />
+                        </svg></div>
+                    </div>
+                    <div class="radio-description">висипання на обличчі/тілі</div>
+                  </div>
+                </label>
+                <label class="calculator-radio">
+                  <input type="radio" name="direction" value="hair" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Волосся <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                          width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clip-path="url(#clip0_281_190)">
+                            <path
+                              d="M17.7714 17.7777C17.7714 19.4533 17.3142 21.2444 16.5142 22.6888C20.6857 20.8399 23.6571 16.5066 23.6571 11.5955C23.6571 5.06662 18.4571 -0.191162 12 -0.191162C11.4285 -0.191162 10.8571 -0.133384 10.2857 -0.0756065C10.6285 0.848838 10.9142 1.7155 11.3142 2.58217C11.7142 3.56439 12.2285 4.54662 12.7428 5.41328C13.3142 6.33773 13.8857 7.20439 14.5714 8.07106C15.2571 8.99551 15.8285 9.97773 16.3428 11.0177C17.2571 13.1555 17.8285 15.4666 17.7714 17.7777Z"
+                              fill="#DDDDDD" />
+                            <path
+                              d="M13.0285 23.6133C13.0857 23.6133 13.1428 23.6133 13.2 23.6133C14.1142 23.4977 15.0285 23.2666 15.8857 22.9777C16.4 21.3022 16.5142 19.5688 16.3428 17.8933C16.1714 15.8133 15.5428 13.7911 14.6857 11.8266C14.2857 10.8444 13.7714 9.97773 13.1428 9.05329C12.5142 8.12884 11.9428 7.14662 11.4857 6.10662C11.0285 5.06662 10.6285 3.96884 10.4 2.87107C10.2285 1.88884 10.1142 0.906622 10.0571 -0.0178223C8.85709 0.155511 7.77138 0.559955 6.74281 1.02218C7.25709 3.85329 8.05709 6.10662 10.3428 9.16884C11.8857 11.0755 16.1142 17.6044 13.0285 23.6133Z"
+                              fill="#DDDDDD" />
+                            <path
+                              d="M0.285681 11.5955C0.285681 18.1244 5.54282 23.671 11.9428 23.671H12.3428C12.4571 23.4977 12.5143 23.3244 12.6285 23.151C12.5143 21.1288 10.3428 17.3733 8.79997 17.431C6.85711 17.5466 6.22854 17.5466 5.31425 17.431C4.39997 17.3155 4.28568 16.2177 4.62854 15.9866C4.91425 15.8133 4.74282 15.351 4.62854 15.1777C3.99997 14.8888 4.11425 14.3688 4.28568 14.1377C3.88568 13.9644 4.11425 13.3288 4.28568 13.1555C4.45711 12.9244 4.39997 12.5199 3.88568 12.1733C3.48568 11.8844 3.59997 11.5955 3.71425 11.4799C4.28568 10.8444 4.62854 10.4399 5.82854 8.87992C5.54282 6.8577 6.22854 4.14215 6.62854 2.98659C6.5714 2.40881 6.39997 1.88881 6.28568 1.31104C2.74282 3.27548 0.285681 7.14659 0.285681 11.5955Z"
+                              fill="#DDDDDD" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_281_190">
+                              <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)" />
+                            </clipPath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="radio-description">випадіння/шкіра голови</div>
+                  </div>
+                </label>
+                <label class="calculator-radio">
+                  <input type="radio" name="direction" value="other" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Інше <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" viewBox="0 0 24 24" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.20442 1.60773C9.20442 1.2721 9.4765 1 9.81215 1H14.1878C14.5235 1 14.7956 1.2721 14.7956 1.60773C14.7956 1.94338 14.5235 2.21547 14.1878 2.21547H12.6077V3.81776C14.4164 3.95019 16.0622 4.66889 17.3558 5.7847L18.5245 4.61602L17.5868 3.67835C17.3495 3.44102 17.3495 3.05622 17.5868 2.81889C17.8242 2.58155 18.209 2.58155 18.4463 2.81889L21.1811 5.5537C21.4184 5.79102 21.4184 6.17583 21.1811 6.41316C20.9438 6.65048 20.559 6.65048 20.3217 6.41316L19.384 5.47548L18.2153 6.64416C19.3311 7.93784 20.0498 9.58365 20.1822 11.3923H21.7845V9.81215C21.7845 9.4765 22.0566 9.20442 22.3923 9.20442C22.7279 9.20442 23 9.4765 23 9.81215V14.1878C23 14.5235 22.7279 14.7956 22.3923 14.7956C22.0566 14.7956 21.7845 14.5235 21.7845 14.1878V12.6077H20.1822C20.0498 14.4164 19.3311 16.0622 18.2153 17.3558L19.384 18.5245L20.3217 17.5868C20.559 17.3495 20.9438 17.3495 21.1811 17.5868C21.4184 17.8242 21.4184 18.209 21.1811 18.4463L18.4463 21.1811C18.209 21.4184 17.8242 21.4184 17.5868 21.1811C17.3495 20.9438 17.3495 20.559 17.5868 20.3217L18.5245 19.384L17.3558 18.2153C16.0622 19.3311 14.4164 20.0498 12.6077 20.1822V21.7845H14.1878C14.5235 21.7845 14.7956 22.0566 14.7956 22.3923C14.7956 22.7279 14.5235 23 14.1878 23H9.81215C9.4765 23 9.20442 22.7279 9.20442 22.3923C9.20442 22.0566 9.4765 21.7845 9.81215 21.7845H11.3923V20.1822C9.58365 20.0498 7.93784 19.3311 6.64416 18.2153L5.47548 19.384L6.41316 20.3217C6.65048 20.559 6.65048 20.9438 6.41316 21.1811C6.17583 21.4184 5.79102 21.4184 5.5537 21.1811L2.81889 18.4463C2.58155 18.209 2.58155 17.8242 2.81889 17.5868C3.05622 17.3495 3.44102 17.3495 3.67835 17.5868L4.61602 18.5245L5.7847 17.3558C4.66889 16.0622 3.95019 14.4164 3.81776 12.6077H2.21547V14.1878C2.21547 14.5235 1.94338 14.7956 1.60773 14.7956C1.2721 14.7956 1 14.5235 1 14.1878V9.81215C1 9.4765 1.2721 9.20442 1.60773 9.20442C1.94338 9.20442 2.21547 9.4765 2.21547 9.81215V11.3923H3.81776C3.95019 9.58365 4.66889 7.93784 5.7847 6.64416L4.61602 5.47548L3.67835 6.41316C3.44102 6.65048 3.05622 6.65048 2.81889 6.41316C2.58155 6.17583 2.58155 5.79102 2.81889 5.5537L5.5537 2.81889C5.79102 2.58155 6.17583 2.58155 6.41316 2.81889C6.65048 3.05622 6.65048 3.44102 6.41316 3.67835L5.47548 4.61602L6.64416 5.7847C7.93784 4.66889 9.58365 3.95019 11.3923 3.81776V2.21547H9.81215C9.4765 2.21547 9.20442 1.94338 9.20442 1.60773ZM16.1022 12.547C16.5553 12.547 16.9227 12.1796 16.9227 11.7265C16.9227 11.2734 16.5553 10.9061 16.1022 10.9061C15.6491 10.9061 15.2818 11.2734 15.2818 11.7265C15.2818 12.1796 15.6491 12.547 16.1022 12.547ZM13.0939 16.1022C13.0939 16.5553 12.7266 16.9227 12.2735 16.9227C11.8204 16.9227 11.453 16.5553 11.453 16.1022C11.453 15.6491 11.8204 15.2818 12.2735 15.2818C12.7266 15.2818 13.0939 15.6491 13.0939 16.1022ZM9.81215 11.453C10.7184 11.453 11.453 10.7184 11.453 9.81215C11.453 8.9059 10.7184 8.17127 9.81215 8.17127C8.9059 8.17127 8.17127 8.9059 8.17127 9.81215C8.17127 10.7184 8.9059 11.453 9.81215 11.453Z"
+                            fill="#DDDDDD" />
+                        </svg></div>
+                    </div>
+                    <div class="radio-description">дерматит, алергія, грибок</div>
+                  </div>
+                </label>
+              </div>
+              <div class="buttons-container">
+                <button class="back_button" onclick="prevStep(2)">назад</button>
+                <button class="red_button calculator-button" onclick="nextStep(2)">ПЕРЕЙТИ ДАЛІ</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="calculator-step step-3">
+              <div class="step-header">
+                <span class="step-number">
+                  <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                      fill="none">
+                      <path
+                        d="M3.33332 13.3334V11.3501C3.33332 9.58341 2.47499 8.75008 2.49999 6.66675C2.52499 4.40008 3.74165 1.66675 6.24999 1.66675C7.80832 1.66675 8.33332 3.16675 8.33332 4.58341C8.33332 7.17508 6.66665 9.30008 6.66665 11.8167V13.3334C6.66665 13.7754 6.49106 14.1994 6.1785 14.5119C5.86594 14.8245 5.44201 15.0001 4.99999 15.0001C4.55796 15.0001 4.13404 14.8245 3.82148 14.5119C3.50891 14.1994 3.33332 13.7754 3.33332 13.3334Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                      <path
+                        d="M16.6667 16.6667V14.6833C16.6667 12.9167 17.525 12.0833 17.5 10C17.475 7.73333 16.2583 5 13.75 5C12.1917 5 11.6667 6.5 11.6667 7.91667C11.6667 10.5083 13.3333 12.6333 13.3333 15.15V16.6667C13.3333 17.1087 13.5089 17.5326 13.8215 17.8452C14.134 18.1577 14.558 18.3333 15 18.3333C15.442 18.3333 15.8659 18.1577 16.1785 17.8452C16.4911 17.5326 16.6667 17.1087 16.6667 16.6667Z"
+                        fill="#1C1C1C" fill-opacity="0.15" />
+                    </svg></div>КРОК 3
+                </span>
+                <h5>Ви вже лікувалися<br />у Вероніки?</h5>
+                <p class="step-subtitle">(саме з цього питання)</p>
+              </div>
+              <div class="calculator-radio-group">
+                <label class="calculator-radio custom">
+                  <input type="radio" name="previous" value="no" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Ні</div>
+                  </div>
+                </label>
+                <label class="calculator-radio custom">
+                  <input type="radio" name="previous" value="completed" />
+                  <span class="radio-custom"></span>
+                  <div class="radio-content">
+                    <div class="radio-title">Так, завершив(ла)<br />З місяці лікування</div>
+                  </div>
+                </label>
+              </div>
+              <div class="buttons-container">
+                <button class="back_button" onclick="prevStep(3)">назад</button>
+                <button class="red_button calculator-button" onclick="showResult()">ОТРИМАТИ РЕКОМЕНДАЦІЮ</button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
     </section>
 
     <section>
@@ -593,6 +758,48 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="about_me">
+        <div class="container">
+          <h4 class="fade-in">Про мене</h4>
+          <img src="./assets/images/about_me_img.png" alt="About me" class="scale-in" />
+          <div class="about_list stagger-children">
+            <div class="first">
+              <ul class="list-appear">
+                <li>
+                  <span><b>4</b>+</span>
+                  <p>років досвід роботи</p>
+                </li>
+                <li>
+                  <span><b>2500</b>+</span>
+                  <p>пацієнтів онлайн та офлайн</p>
+                </li>
+                <li>
+                  <span><b>100</b>+</span>
+                  <p>навчань в Україні та закордоном</p>
+                </li>
+              </ul>
+            </div>
+            <div class="second">
+              <div class="icon"></div>
+              <h4>Доказова медицина</h4>
+              <p>
+                Використовую методи,<br />підтверджені дослідженнями<br />Американських та
+                Європейських<br />асоціацій
+              </p>
+            </div>
+            <div class="third">
+              <div class="icon"></div>
+              <h4>Комплексний підхід</h4>
+              <p>
+                Корекція харчування, сну, стресу,<br /> дефіцитів та способу життя
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -930,451 +1137,272 @@
       </div>
     </section>
 
+    <div class="popup-overlay result-1-popup">
+      <div class="calculator-result">
+        <div class="result-content result-1">
+          <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <g opacity="0.6">
+                <path d="M12 4L4 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 4L12 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg></div>
+          <h4>Лікування АКНе</h4>
+          <p>Комлексне лікування акне
+            <b>тривалість 3 місяці</b>
+          </p>
+
+          <div class="price">
+            <h4>Вартість:</h4>
+            <ul>
+              <li class="ua">
+                <div class="title">
+                  <div class="icon"></div>Україна:
+                </div>
+                <div class="price">3000 <span>ГРН</span></div>
+              </li>
+              <li class="other">
+                <div class="us">
+                  <div class="title">
+                    <div class="icon"></div>США:
+                  </div>
+                  <div class="price">150 <span>USD</span></div>
+                </div>
+                <div class="eu">
+                  <div class="title">
+                    <div class="icon"></div>ЄС:
+                  </div>
+                  <div class="price">100 <span>EUR</span></div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://t.me/drmyts_bot?start=w38923905--acne" target="_blank" class="red_button join_link">Оплатити
+            лікування</a>
+
+          <a href="#result-1" class="details">Детальніше про лікування<svg xmlns="http://www.w3.org/2000/svg" width="7"
+              height="12" viewBox="0 0 7 12" fill="none">
+              <path d="M0.75 10.75L5.75 5.75L0.75 0.75" stroke="#C52226" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <a href="#" class="back_test"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
+              fill="none">
+              <path d="M5.75 10.75L0.75 5.75L5.75 0.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Повторити тест</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay result-2-popup">
+      <div class="calculator-result">
+        <div class="result-content result-2">
+          <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <g opacity="0.6">
+                <path d="M12 4L4 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 4L12 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg></div>
+          <h4>Контрольна <br />консультація</h4>
+          <p>Повторна консультація після завершення терміну лікування для перевірки стану та корекції лікування
+          </p>
+
+          <a href="#result-2" class="details">Детальніше про лікування<svg xmlns="http://www.w3.org/2000/svg" width="7"
+              height="12" viewBox="0 0 7 12" fill="none">
+              <path d="M0.75 10.75L5.75 5.75L0.75 0.75" stroke="#C52226" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <a href="#" class="back_test"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
+              fill="none">
+              <path d="M5.75 10.75L0.75 5.75L5.75 0.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Повторити тест</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay result-3-popup">
+      <div class="calculator-result">
+        <div class="result-content result-3">
+          <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <g opacity="0.6">
+                <path d="M12 4L4 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 4L12 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg></div>
+          <h4 style="max-width: 200px; margin: 0 auto 8px;">Консультація
+            трихолога</h4>
+          <p>Комплексне лікування алопеції
+            <b>підтримка: 3 місяці</b>
+          </p>
+
+          <div class="price">
+            <h4>Вартість:</h4>
+            <ul>
+              <li class="ua">
+                <div class="title">
+                  <div class="icon"></div>Україна:
+                </div>
+                <div class="price">2000 <span>ГРН</span></div>
+              </li>
+              <li class="other">
+                <div class="us">
+                  <div class="title">
+                    <div class="icon"></div>США:
+                  </div>
+                  <div class="price">100 <span>USD</span></div>
+                </div>
+                <div class="eu">
+                  <div class="title">
+                    <div class="icon"></div>ЄС:
+                  </div>
+                  <div class="price">80 <span>EUR</span></div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://t.me/drmyts_bot?start=w38923905--trychology" target="_blank"
+            class="red_button join_link">Оплатити лікування</a>
+
+          <a href="#result-3" class="details">Детальніше про лікування<svg xmlns="http://www.w3.org/2000/svg" width="7"
+              height="12" viewBox="0 0 7 12" fill="none">
+              <path d="M0.75 10.75L5.75 5.75L0.75 0.75" stroke="#C52226" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <a href="#" class="back_test"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
+              fill="none">
+              <path d="M5.75 10.75L0.75 5.75L5.75 0.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Повторити тест</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay result-4-popup">
+      <div class="calculator-result">
+        <div class="result-content result-4">
+          <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <g opacity="0.6">
+                <path d="M12 4L4 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 4L12 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg></div>
+          <h4>Консультація по <br />догляду за шкірою</h4>
+          <p>Комплексне лікування алопеції
+            <b>підтримка: 3 місяці</b>
+          </p>
+
+          <div class="price">
+            <h4>Вартість:</h4>
+            <ul>
+              <li class="ua">
+                <div class="title">
+                  <div class="icon"></div>Україна:
+                </div>
+                <div class="price">2000 <span>ГРН</span></div>
+              </li>
+              <li class="other">
+                <div class="us">
+                  <div class="title">
+                    <div class="icon"></div>США:
+                  </div>
+                  <div class="price">100 <span>USD</span></div>
+                </div>
+                <div class="eu">
+                  <div class="title">
+                    <div class="icon"></div>ЄС:
+                  </div>
+                  <div class="price">80 <span>EUR</span></div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://t.me/drmyts_bot?start=w38923905--selfcare" target="_blank"
+            class="red_button join_link">Оплатити консультацію</a>
+
+          <a href="#result-4" class="details">Детальніше про лікування<svg xmlns="http://www.w3.org/2000/svg" width="7"
+              height="12" viewBox="0 0 7 12" fill="none">
+              <path d="M0.75 10.75L5.75 5.75L0.75 0.75" stroke="#C52226" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <a href="#" class="back_test"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
+              fill="none">
+              <path d="M5.75 10.75L0.75 5.75L5.75 0.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Повторити тест</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay result-5-popup">
+      <div class="calculator-result">
+        <div class="result-content result-5">
+          <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <g opacity="0.6">
+                <path d="M12 4L4 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 4L12 12" stroke="#1C1C1C" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg></div>
+          <h4>Дерматологічна <br />консультація</h4>
+          <p>Алергічні, бактеріальні, вірусні захворювання, які не потребують підтримки лікування
+          </p>
+
+          <div class="price">
+            <h4>Вартість:</h4>
+            <ul>
+              <li class="ua">
+                <div class="title">
+                  <div class="icon"></div>Україна:
+                </div>
+                <div class="price">1000 <span>ГРН</span></div>
+              </li>
+              <li class="other">
+                <div class="us">
+                  <div class="title">
+                    <div class="icon"></div>США:
+                  </div>
+                  <div class="price">75 <span>USD</span></div>
+                </div>
+                <div class="eu">
+                  <div class="title">
+                    <div class="icon"></div>ЄС:
+                  </div>
+                  <div class="price">50 <span>EUR</span></div>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://t.me/drmyts_bot?start=w38923905--dermatology" target="_blank" id="resultLink join_link"
+            class="red_button">Оплатити консультацію</a>
+
+          <a href="#result-5" class="details">Детальніше про лікування<svg xmlns="http://www.w3.org/2000/svg" width="7"
+              height="12" viewBox="0 0 7 12" fill="none">
+              <path d="M0.75 10.75L5.75 5.75L0.75 0.75" stroke="#C52226" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+          <a href="#" class="back_test"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
+              fill="none">
+              <path d="M5.75 10.75L0.75 5.75L5.75 0.75" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>Повторити тест</a>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="./assets/scripts/telegram-web-app.js"></script>
-
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const consultationPriceBlocks = document.querySelectorAll('.consultationPrice')
-
-      consultationPriceBlocks.forEach(function (priceBlock) {
-        const buttons = priceBlock.querySelectorAll('.buttons button')
-        const uaPrice = priceBlock.querySelector('.ua .price')
-        const usPrice = priceBlock.querySelector('.us .price')
-        const euPrice = priceBlock.querySelector('.eu .price')
-
-        const consultationBlock = priceBlock.closest('.consultation')
-
-        let joinLink = null
-        if (consultationBlock) {
-          let currentElement = consultationBlock
-          while (currentElement.nextElementSibling) {
-            if (currentElement.nextElementSibling.classList.contains('join_link')) {
-              joinLink = currentElement.nextElementSibling
-              break
-            }
-            currentElement = currentElement.nextElementSibling
-          }
-
-          if (!joinLink) {
-            const parentBlock = consultationBlock.parentNode
-            if (parentBlock) {
-              joinLink = parentBlock.querySelector(':scope > .join_link')
-            }
-          }
-        }
-
-        priceBlock.relatedJoinLink = joinLink
-
-        buttons.forEach(button => {
-          button.addEventListener('click', function () {
-            buttons.forEach(btn => btn.classList.remove('active'))
-
-            this.classList.add('active')
-
-            const id = this.id
-            const prices = id.split(' ')
-
-            if (prices.length >= 3) {
-              const uaData = prices[0].split('-')
-              if (uaData.length === 3 && uaPrice) {
-                uaPrice.innerHTML = uaData[2] + ' <span>ГРН</span>'
-              }
-
-              const usData = prices[1].split('-')
-              if (usData.length === 3 && usPrice) {
-                usPrice.innerHTML = usData[2] + ' <span>USD</span>'
-              }
-
-              const euData = prices[2].split('-')
-              if (euData.length === 3 && euPrice) {
-                euPrice.innerHTML = euData[2] + ' <span>EUR</span>'
-              }
-            }
-
-            const link = this.getAttribute('data-link')
-            if (link && priceBlock.relatedJoinLink) {
-              priceBlock.relatedJoinLink.href = link
-              console.log('Оновлено посилання:', link, 'для елементу:', priceBlock.relatedJoinLink)
-            }
-          })
-        })
-      })
-    })
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var links = document.querySelectorAll('.join_link')
-
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function (e) {
-          e.preventDefault()
-
-          var url = this.href
-
-          window.location.href = url
-
-          setTimeout(function () {
-            if (window.Telegram && window.Telegram.WebApp) {
-              Telegram.WebApp.close()
-            }
-          }, 100)
-        })
-      }
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      checkElementsInView()
-
-      $(window).on('scroll', function () {
-        checkElementsInView()
-      })
-
-      function checkElementsInView() {
-        $('.fade-in, .slide-up, .fade-in-left, .fade-in-right, .scale-in').each(function () {
-          if (isElementInViewport(this) && !$(this).hasClass('visible')) {
-            $(this).addClass('visible')
-          }
-        })
-
-        $('.stagger-children').each(function () {
-          if (isElementInViewport(this)) {
-            const children = $(this).children()
-            let delay = 0
-
-            children.each(function () {
-              const element = $(this)
-              if (!element.hasClass('visible')) {
-                setTimeout(function () {
-                  element.addClass('visible')
-                }, delay)
-                delay += 150
-              }
-            })
-          }
-        })
-
-        $('.list-appear').each(function () {
-          if (isElementInViewport(this)) {
-            const items = $(this).find('li')
-            let delay = 0
-
-            items.each(function () {
-              const item = $(this)
-              if (!item.hasClass('visible')) {
-                setTimeout(function () {
-                  item.addClass('visible')
-                }, delay)
-                delay += 100
-              }
-            })
-          }
-        })
-      }
-
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect()
-        return (
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
-          rect.bottom >= 0
-        )
-      }
-    })
-
-    document.addEventListener('DOMContentLoaded', function () {
-      function initSliderWithVisibilityControl(sliderSelector, slickOptions) {
-        const sliderElement = $(sliderSelector)
-        const defaultOptions = {
-          autoplay: false,
-          pauseOnHover: false
-        }
-
-        const options = { ...defaultOptions, ...slickOptions }
-        sliderElement.slick(options)
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              sliderElement.slick('slickPlay')
-            } else {
-              sliderElement.slick('slickPause')
-            }
-          })
-        }, {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.3
-        })
-
-
-        observer.observe(sliderElement[0])
-      }
-
-      initSliderWithVisibilityControl('.sliders .messageSlider', {
-        infinite: true,
-        variableWidth: true,
-        speed: 1000,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        mobileFirst: true,
-        useTransform: true,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        autoplaySpeed: 3000
-      })
-
-      initSliderWithVisibilityControl('.sliders .photoSlider', {
-        infinite: true,
-        variableWidth: true,
-        speed: 1000,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        mobileFirst: true,
-        useTransform: true,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        autoplaySpeed: 3000
-      })
-
-      initSliderWithVisibilityControl('.slider_certificate .content', {
-        infinite: true,
-        variableWidth: true,
-        speed: 1000,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        mobileFirst: true,
-        useTransform: true,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false
-      })
-    })
-
-
-    $(document).ready(function () {
-      function animateNumbers() {
-        $('.about_list .first li span b').each(function () {
-          const $this = $(this)
-
-          if (!$this.hasClass('animated')) {
-
-            let endValue = parseInt($this.text())
-
-            if ($this.text().indexOf('+') !== -1) {
-              endValue = parseInt($this.text())
-              const hasPlus = true
-            }
-
-            $this.text('0')
-            $this.addClass('animated')
-
-            const duration = 2000
-            let step = 1
-
-            if (endValue > 100) {
-              step = Math.ceil(endValue / 100)
-            }
-
-            let current = 0
-            const interval = setInterval(function () {
-              current += step
-
-              if (current >= endValue) {
-                clearInterval(interval)
-                $this.text(endValue + ($this.text().indexOf('+') !== -1 ? '+' : ''))
-              } else {
-                $this.text(current)
-              }
-            }, Math.floor(duration / (endValue / step)))
-          }
-        })
-      }
-
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect()
-        return (
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
-          rect.bottom >= 0
-        )
-      }
-
-      function checkIfNumbersVisible() {
-        const numbersBlock = $('.about_list .first')
-        if (isElementInViewport(numbersBlock[0]) && !numbersBlock.hasClass('numbers-animated')) {
-          numbersBlock.addClass('numbers-animated')
-          animateNumbers()
-        }
-      }
-
-      checkIfNumbersVisible()
-
-      $(window).on('scroll', function () {
-        checkIfNumbersVisible()
-      })
-    })
-
-    $(document).ready(function () {
-      let expanded = false
-      const $hiddenContent = $('.hidden-content')
-      const $readMoreBtn = $('#readMoreBtn')
-
-      $readMoreBtn.click(function () {
-        if (!expanded) {
-          $hiddenContent.css('height', 'auto')
-          $hiddenContent.addClass('visible')
-
-          $readMoreBtn.text('Згорнути')
-          expanded = true
-        } else {
-          $hiddenContent.removeClass('visible')
-
-          setTimeout(function () {
-            $hiddenContent.css('height', '0')
-          }, 100)
-
-          $readMoreBtn.text('Дивитись далі')
-          expanded = false
-        }
-      })
-    })
-
-    $(document).ready(function () {
-      const $showMoreBtn = $('.show-more-btn')
-      let isExpanded = false
-
-      $showMoreBtn.click(function () {
-        if (!isExpanded) {
-          expandList()
-        } else {
-          collapseList()
-        }
-
-        isExpanded = !isExpanded
-        $showMoreBtn.css({
-          'display': 'none'
-        })
-      })
-
-      function expandList() {
-        const $hiddenItems = $('.list-appear-education li.hidden')
-        const $lastItem = $('.list-appear-education li.last-item')
-
-        $lastItem.removeClass('last-item')
-
-        $hiddenItems.each(function (index) {
-          const $item = $(this)
-
-          $item.removeClass('hidden').addClass('animating')
-
-          const height = $item.outerHeight()
-
-          $item.css({
-            'height': '0',
-            'opacity': '0',
-            'overflow': 'hidden'
-          })
-
-          setTimeout(function () {
-            $item.css({
-              'transition': 'height 0.4s ease, opacity 0.4s ease',
-              'height': height + 'px',
-              'opacity': '1'
-            })
-
-            setTimeout(function () {
-              $item.css({
-                'height': '',
-                'overflow': '',
-                'transition': ''
-              }).addClass('visible').removeClass('animating')
-            }, 450)
-          }, 100 * index)
-        })
-      }
-
-      function collapseList() {
-        const $visibleItems = $('.list-appear-education li.visible')
-        const lastIndex = $visibleItems.length - 1
-
-        $($visibleItems.get().reverse()).each(function (index) {
-          const $item = $(this)
-          const height = $item.outerHeight()
-
-          setTimeout(function () {
-            $item.addClass('animating').css({
-              'height': height + 'px',
-              'overflow': 'hidden',
-              'transition': 'height 0.4s ease, opacity 0.4s ease'
-            })
-
-            setTimeout(function () {
-              $item.css({
-                'height': '0',
-                'opacity': '0'
-              })
-
-              setTimeout(function () {
-                $item.removeClass('visible')
-                  .addClass('hidden')
-                  .removeClass('animating')
-                  .css({
-                    'height': '',
-                    'opacity': '',
-                    'overflow': '',
-                    'transition': ''
-                  })
-
-                if (index === lastIndex) {
-                  $('.list-appear-education li:not(.hidden)').last().addClass('last-item')
-                }
-              }, 450)
-            }, 10)
-          }, 100 * index)
-        })
-      }
-    })
-
-    $(document).ready(function () {
-      $('.tarifsContent > div').hide()
-      $('.tarifsContent > div:first-child').show()
-
-      $('.sections .buttons button').click(function () {
-        $('.sections .buttons button').removeClass('active')
-        $(this).addClass('active')
-
-        var index = $(this).index()
-
-        $('.tarifsContent > div').hide()
-
-        $('.tarifsContent > div').eq(index).show()
-      })
-    })
-
-    $(document).ready(function () {
-      $('.container ul li .content').hide()
-      $('.container ul li').removeClass('open')
-      $('.container ul li .title button').css('transform', 'rotate(0deg)')
-      $('.container ul li .title').click(function () {
-        var currentLi = $(this).parent()
-        var contentBlock = $(this).next('.content')
-        var arrowButton = $(this).find('button')
-        if (currentLi.hasClass('open')) {
-          currentLi.removeClass('open')
-          contentBlock.slideUp(300)
-          arrowButton.css('transform', 'rotate(0deg)')
-        } else {
-          currentLi.addClass('open')
-          contentBlock.slideDown(300)
-          arrowButton.css('transform', 'rotate(180deg)')
-        }
-      })
-    });
-  </script>
-
+  <script src="./assets/scripts/scripts.js?v=1.0"></script>
 </body>
 
 </html>
