@@ -1117,27 +1117,37 @@ main {
           margin-bottom: 12px;
         }
 
+        & > svg {
+          display: block;
+          margin: 0 auto 12px;
+        }
+
         & .buttons {
           display: flex;
-          flex-wrap: wrap;
           justify-content: center;
           gap: 5px;
           margin-bottom: 32px;
+          flex-direction: column;
 
           & button {
             background-color: transparent;
             padding: 8px 12px;
-            font-family: Montserrat;
+            font-family: "Montserrat";
             font-weight: 500;
+            font-style: Medium;
             font-size: 12px;
-            line-height: 140%;
+            line-height: 132%;
             letter-spacing: 0%;
-            color: #fff;
-            border: 1px solid #fff;
-            border-radius: 100px;
+            text-transform: uppercase;
 
+            color: #fff;
+
+            border-radius: 100px;
+            height: 40px;
+            border: 1px solid #ffffff26;
             &.active {
-              background-color: #c52226;
+              background-color: #fff;
+              color: #1c1c1c;
               border: none;
             }
           }
@@ -1461,34 +1471,38 @@ main {
                 letter-spacing: 0%;
                 text-align: center;
                 opacity: 0.6;
-                margin-bottom: 16px;
+                margin-bottom: 12px;
               }
 
               & .buttons {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 gap: 5px;
-                margin: 0 auto 20px;
+                margin-bottom: 32px;
+                flex-direction: column;
 
                 & button {
                   background-color: transparent;
                   padding: 8px 12px;
-                  font-family: Montserrat;
+                  font-family: "Montserrat";
                   font-weight: 500;
+                  font-style: Medium;
                   font-size: 12px;
-                  line-height: 140%;
+                  line-height: 132%;
                   letter-spacing: 0%;
-                  color: #1c1c1c;
-                  border: 1px solid #1c1c1c;
-                  border-radius: 100px;
-                  max-width: 160px;
-                  margin: 0 auto;
+                  text-transform: uppercase;
 
+                  color: #1c1c1c;
+
+                  border-radius: 100px;
+                  height: 40px;
+                  border: 1px solid #ffffff26;
+                  background-color: #fff;
+                  border: 1px solid #1c1c1c26;
                   &.active {
-                    background-color: #c52226;
-                    border: none;
+                    background-color: #1c1c1c;
                     color: #fff;
+                    border: none;
                   }
                 }
               }
@@ -1631,7 +1645,7 @@ main {
 
           & .red_button {
             margin: 0 auto;
-            width: auto;
+            width: 270px;
           }
         }
 
@@ -2592,5 +2606,23 @@ main {
         }
       }
     }
+  }
+}
+
+.arrow-line {
+  display: block;
+  margin: 0 auto 12px;
+  animation: 2s linear 1s infinite alternate toTop;
+}
+
+@keyframes toTop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -1147,27 +1147,35 @@ main {
   color: #84817e;
   margin-bottom: 12px;
 }
+.tarifs .container .content .sections > svg {
+  display: block;
+  margin: 0 auto 12px;
+}
 .tarifs .container .content .sections .buttons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 5px;
   margin-bottom: 32px;
+  flex-direction: column;
 }
 .tarifs .container .content .sections .buttons button {
   background-color: transparent;
   padding: 8px 12px;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-weight: 500;
+  font-style: Medium;
   font-size: 12px;
-  line-height: 140%;
+  line-height: 132%;
   letter-spacing: 0%;
+  text-transform: uppercase;
   color: #fff;
-  border: 1px solid #fff;
   border-radius: 100px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
 }
 .tarifs .container .content .sections .buttons button.active {
-  background-color: #c52226;
+  background-color: #fff;
+  color: #1c1c1c;
   border: none;
 }
 .tarifs .container .content .tarifsContent .number {
@@ -1444,33 +1452,36 @@ main {
   letter-spacing: 0%;
   text-align: center;
   opacity: 0.6;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 5px;
-  margin: 0 auto 20px;
+  margin-bottom: 32px;
+  flex-direction: column;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons button, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons button, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons button {
   background-color: transparent;
   padding: 8px 12px;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-weight: 500;
+  font-style: Medium;
   font-size: 12px;
-  line-height: 140%;
+  line-height: 132%;
   letter-spacing: 0%;
+  text-transform: uppercase;
   color: #1c1c1c;
-  border: 1px solid #1c1c1c;
   border-radius: 100px;
-  max-width: 160px;
-  margin: 0 auto;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  background-color: #fff;
+  border: 1px solid rgba(28, 28, 28, 0.1490196078);
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice .buttons button.active, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice .buttons button.active, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice .buttons button.active {
-  background-color: #c52226;
-  border: none;
+  background-color: #1c1c1c;
   color: #fff;
+  border: none;
 }
 .tarifs .container .content .tarifsContent .first .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .second .consultation .consultationPrice ul, .tarifs .container .content .tarifsContent .third .consultation .consultationPrice ul {
   display: flex;
@@ -1592,7 +1603,7 @@ main {
 }
 .tarifs .container .content .tarifsContent .first .red_button, .tarifs .container .content .tarifsContent .second .red_button, .tarifs .container .content .tarifsContent .third .red_button {
   margin: 0 auto;
-  width: auto;
+  width: 270px;
 }
 .tarifs .container .content .tarifsContent .second > p {
   font-family: Cormorant Garamond;
@@ -2394,4 +2405,22 @@ main {
 }
 .popup-overlay .calculator-result .result-content .back_test svg {
   margin-right: 8px;
+}
+
+.arrow-line {
+  display: block;
+  margin: 0 auto 12px;
+  animation: 2s linear 1s infinite alternate toTop;
+}
+
+@keyframes toTop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
