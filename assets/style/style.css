@@ -480,6 +480,9 @@ main {
   text-align: center;
 }
 
+.history {
+  margin-top: 64px;
+}
 .history .container .text {
   position: relative;
   overflow: hidden;
