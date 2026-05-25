@@ -1242,8 +1242,9 @@ main {
   text-align: left;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .price {
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: Montserrat;
   line-height: 100%;
   letter-spacing: -2%;
   text-transform: uppercase;
