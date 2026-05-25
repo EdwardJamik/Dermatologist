@@ -1221,6 +1221,7 @@ main {
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el img {
@@ -1249,6 +1250,9 @@ main {
   letter-spacing: -2%;
   text-transform: uppercase;
   font-variant-numeric: lining-nums;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .price > span {
+  font-size: 14px;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .pay {
   color: #c52226;

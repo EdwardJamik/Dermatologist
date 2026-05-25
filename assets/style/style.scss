@@ -1196,6 +1196,7 @@ main {
 
             & .list-el {
               display: flex;
+              align-items: center;
               gap: 10px;
               & img {
                 max-width: 50px;
@@ -1223,6 +1224,10 @@ main {
                   letter-spacing: -2%;
                   text-transform: uppercase;
                   font-variant-numeric: lining-nums;
+
+                  & > span {
+                    font-size: 14px;
+                  }
                 }
 
                 & .pay {
