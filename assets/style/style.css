@@ -1181,6 +1181,81 @@ main {
   color: #1c1c1c;
   border: none;
 }
+.tarifs .container .content .tarifsContent .payment_type {
+  position: relative;
+  border-radius: 12px;
+  border: 1px dashed #c52226;
+  margin: 15px 10px;
+  padding: 16px;
+}
+.tarifs .container .content .tarifsContent .payment_type > p {
+  font-size: 14px;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+  text-align: left;
+}
+.tarifs .container .content .tarifsContent .payment_type > span {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 172px;
+  background-color: #c52226;
+  border-radius: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el {
+  display: flex;
+  gap: 10px;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el img {
+  max-width: 50px;
+  height: 50px;
+  width: 100%;
+  border-radius: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div {
+  display: flex;
+  flex-direction: column;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div p {
+  font-size: 14px;
+  color: #1c1c1c;
+  opacity: 0.6;
+  text-align: left;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  font-variant-numeric: lining-nums;
+}
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .pay {
+  color: #c52226;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  font-family: Montserrat;
+  font-size: 14px;
+}
 .tarifs .container .content .tarifsContent .number {
   width: 40px;
   height: 40px;
