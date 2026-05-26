@@ -1186,7 +1186,10 @@ main {
   border-radius: 12px;
   border: 1px dashed #c52226;
   margin: 15px 10px;
-  padding: 16px;
+  padding: 16px 16px 12px;
+}
+.tarifs .container .content .tarifsContent .payment_type.bottom {
+  margin-bottom: 20px;
 }
 .tarifs .container .content .tarifsContent .payment_type > p {
   font-size: 14px;
@@ -1207,11 +1210,13 @@ main {
   border-radius: 40px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   height: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
+  font-family: "Montserrat";
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list {
   display: flex;
@@ -1225,8 +1230,8 @@ main {
   gap: 10px;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el img {
-  max-width: 50px;
-  height: 50px;
+  max-width: 35px;
+  height: 35px;
   width: 100%;
   border-radius: 100%;
   -o-object-fit: contain;
@@ -1236,22 +1241,27 @@ main {
   display: flex;
   flex-direction: column;
 }
-.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div p {
+.tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div > p {
   font-size: 14px;
   color: #1c1c1c;
   opacity: 0.6;
   text-align: left;
+  margin-bottom: 0;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .price {
-  font-weight: 600;
-  font-size: 18px;
   font-family: Montserrat;
   line-height: 100%;
   letter-spacing: -2%;
   text-transform: uppercase;
+  font-weight: 600;
   font-variant-numeric: lining-nums;
+  font-family: Montserrat;
+  font-size: 14px;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .price > span {
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  font-family: Montserrat;
   font-size: 14px;
 }
 .tarifs .container .content .tarifsContent .payment_type .payment_type-list .list-el > div .pay {
