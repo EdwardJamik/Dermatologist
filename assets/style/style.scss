@@ -1145,6 +1145,16 @@ main {
             border-radius: 100px;
             height: 40px;
             border: 1px solid #ffffff26;
+
+            &#speed {
+              background-color: #d33336;
+              color: #fff;
+
+              &.active {
+                background-color: #f85f5f;
+              }
+            }
+
             &.active {
               background-color: #fff;
               color: #1c1c1c;
@@ -1749,6 +1759,28 @@ main {
         }
 
         & .second {
+          &.speed {
+            & p {
+              font-family: Montserrat;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 155%;
+              letter-spacing: 0%;
+              text-align: center;
+              vertical-align: bottom;
+              text-transform: none;
+
+              &.fw {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 155%;
+                letter-spacing: 0%;
+                text-align: center;
+                vertical-align: bottom;
+              }
+            }
+          }
           & > p {
             font-family: Cormorant Garamond;
             font-weight: 400;
@@ -1760,6 +1792,15 @@ main {
           }
 
           & .services {
+            &.speed {
+              & ul {
+                & li {
+                  & b {
+                    // font-weight: 400;
+                  }
+                }
+              }
+            }
             & ul {
               margin-top: 24px;
 

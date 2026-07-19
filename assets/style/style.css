@@ -1176,6 +1176,13 @@ main {
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.1490196078);
 }
+.tarifs .container .content .sections .buttons button#speed {
+  background-color: #d33336;
+  color: #fff;
+}
+.tarifs .container .content .sections .buttons button#speed.active {
+  background-color: #f85f5f;
+}
 .tarifs .container .content .sections .buttons button.active {
   background-color: #fff;
   color: #1c1c1c;
@@ -1697,6 +1704,25 @@ main {
 .tarifs .container .content .tarifsContent .first .red_button, .tarifs .container .content .tarifsContent .second .red_button, .tarifs .container .content .tarifsContent .third .red_button {
   margin: 0 auto;
   width: 270px;
+}
+.tarifs .container .content .tarifsContent .second.speed p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+  text-transform: none;
+}
+.tarifs .container .content .tarifsContent .second.speed p.fw {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
 }
 .tarifs .container .content .tarifsContent .second > p {
   font-family: Cormorant Garamond;
